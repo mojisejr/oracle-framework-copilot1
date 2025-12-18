@@ -1,9 +1,9 @@
 # Current Focus
 
-**State**: working
-**Task**: Refining Oracle Agents and Knowledge mapping
-**Issue**: #none
-**Since**: 16:27
+**State**: in-progress
+**Task**: Always respond in Thai
+**Issue**: #2
+**Since**: 17:00
 
 ## States
 
