@@ -74,10 +74,33 @@ When the user mentions these commands, follow the logic defined in their respect
 
 ## Session Workflow
 
-1.  **Start**: Check [ψ/inbox/focus.md](ψ/inbox/focus.md) for the current task.
-2.  **Work**: Append to logs in `ψ/memory/logs/` as needed.
-3.  **End**: When the user says "rrr" or "finish session", help them create a retrospective.
-4.  **Distill**: Periodically help the user move patterns from retrospectives to `ψ/memory/learnings/`.
+1.  **Start (Model Check)**: Identify your current model and tier. If using a high-multiplier model for a simple task, suggest a switch. If on Free Tier, activate "Tier Optimization" protocol.
+2.  **Sync**: Check [ψ/inbox/focus.md](ψ/inbox/focus.md) for the current task.
+3.  **Work**: Append to logs in `ψ/memory/logs/` as needed.
+4.  **End**: When the user says "rrr" or "finish session", help them create a retrospective.
+5.  **Distill**: Periodically help the user move patterns from retrospectives to `ψ/memory/learnings/`.
+
+## Model-Specific Execution (Tier Optimization)
+
+If you are a **Free Tier Model** (e.g., GPT-4.1, GPT-5 mini, Haiku 4.5, Gemini 3 Flash) or if the user mentions "Free Tier", you MUST follow this strict workflow:
+
+1.  **Context First**: NEVER assume. Use `grep_search` or `list_dir` at the start.
+2.  **State Sync**: Read [ψ/inbox/focus.md](ψ/inbox/focus.md) immediately.
+3.  **Atomic Edits**: Small, incremental changes only.
+4.  **Mandatory Snapshot**: Log every significant decision in `ψ/memory/logs/`.
+5.  **Tool Transparency**: At the end of each response, list the tools you used to ensure workflow compliance.
+
+## Model Selection Guide (Efficiency & Cost)
+
+| Task Type | Recommended Model | Multiplier | Why? |
+| :--- | :--- | :--- | :--- |
+| **Quick Capture / Logs** | GPT-5 mini / Haiku 4.5 / Raptor mini | 0 - 0.33 | Fast, Zero/Low cost |
+| **Research / Search** | Gemini 3 Flash / Grok Code Fast 1 | 0.25 - 0.33 | High speed, Great tool use |
+| **Active Coding** | Sonnet 4 / GPT-5 / Gemini 3 Pro | 1.0 | High Accuracy & Reasoning |
+| **Deep Distillation** | Opus 4.1 / Claude 4.5 | 3.0 - 10.0 | Maximum Pattern Recognition |
+
+- **Proactive Suggestion**: If the task is simple (e.g., "update focus.md"), and you are a high-multiplier model, you MUST suggest switching to a "Mini" or "Flash" model.
+- **Tier Awareness**: On Free Tier, prioritize high-impact tool use and avoid redundant searches to stay within the 50-request limit.
 
 ## Human Confirmation Loop
 
