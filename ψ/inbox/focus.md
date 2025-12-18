@@ -1,8 +1,9 @@
 # Current Focus
 
-**State**: idle
-**Task**: None
-**Since**: --:--
+**State**: working
+**Task**: Transforming Oracle Framework for GitHub Copilot
+**Issue**: #1
+**Since**: 15:20
 
 ## States
 

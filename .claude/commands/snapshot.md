@@ -5,12 +5,25 @@ Capture a quick insight or learning.
 ## Usage
 
 ```
-/snapshot [description]
+snapshot [description]
 ```
 
-## Output Location
+## Process (AI-Driven)
 
-`psi/memory/logs/YYYY-MM-DD_HH-MM_[slug].md`
+1. **Capture Insight**:
+   - Take the user's description or the most recent significant learning from the chat.
+   - Identify the context (what was being done at the time).
+
+2. **Generate Metadata**:
+   - Current Time: YYYY-MM-DD HH:MM
+   - Slug: Create a URL-friendly slug from the description.
+
+3. **Create File**:
+   - Path: `psi/memory/logs/YYYY-MM-DD_HH-MM_[slug].md`
+   - Use the standard Snapshot format.
+
+4. **Confirm**:
+   - Show the created snapshot to the human.
 
 ## Format
 

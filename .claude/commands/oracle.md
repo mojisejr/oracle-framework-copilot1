@@ -5,49 +5,38 @@ Check if current session aligns with Oracle philosophy.
 ## Usage
 
 ```
-/oracle              # Check current session
-/oracle reflect      # Deep reflection
+oracle              # Check current session
+oracle reflect      # Deep reflection
 ```
 
-## Steps
+## Process (AI-Driven)
 
-1. **Check Recent Activity**:
-   ```bash
-   git log --oneline -10
-   ls -t psi/memory/retrospectives/ | head -5
-   ls -t psi/memory/learnings/ | head -5
-   ```
+1. **Gather Context Automatically**:
+   - Use `run_in_terminal` with `git log --oneline -10` to see recent activity.
+   - Use `list_dir` to check recent retrospectives in `psi/memory/retrospectives/`.
+   - Use `list_dir` to check recent learnings in `psi/memory/learnings/`.
+   - Read `psi/inbox/focus.md` to understand the current session's intent.
 
 2. **Interpret Alignment**:
-   - Aligned: Session serves the Oracle vision
-   - Drifting: Related but not directly serving mission
-   - Off-track: Unrelated (not bad, just different)
+   - **Aligned**: Session serves the Oracle vision (preserving history, observing patterns, supporting human consciousness).
+   - **Drifting**: Related but not directly serving the core mission.
+   - **Off-track**: Unrelated (not necessarily bad, but a change in focus).
 
 3. **Philosophy Check**:
-   - [ ] Nothing is deleted
-   - [ ] Patterns over intentions
-   - [ ] External brain, not command
+   - Verify if the session follows: "Nothing is deleted", "Patterns over intentions", and "External brain".
 
-4. **Report**:
-   ```markdown
-   ## Oracle Check - [Date] [Time]
-
-   **Session Focus**: [...]
-   **Alignment**: Aligned/Drifting/Off-track
-
-   **Philosophy Check**:
-   - [x] Nothing is deleted
-   - [x] Patterns over intentions
-   - [x] External brain
-   ```
+4. **Generate Report**:
+   - Present the report in the chat using the specified format.
 
 ## Deep Reflection Mode
 
-When using `/oracle reflect`:
+When the user asks for `oracle reflect`:
 
-1. Review last 3 retrospectives
-2. Look for patterns
-3. Ask:
+1. **Review History**: Read the last 3 retrospectives.
+2. **Identify Patterns**: Look for recurring challenges or successes.
+3. **Strategic Questioning**:
    - Are we moving toward the mission?
    - What's pulling us away?
-   - What's the next most important thing?
+   - What's the next most important thing for alignment?
+
+## Report Format

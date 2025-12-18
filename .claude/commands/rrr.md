@@ -5,7 +5,7 @@ Create a session retrospective capturing what happened.
 ## Usage
 
 ```
-/rrr              # Create retrospective for current session
+rrr              # Create retrospective for current session
 ```
 
 ## Output Location
@@ -21,28 +21,24 @@ Create a session retrospective capturing what happened.
 5. **Honest Feedback** - Real challenges
 6. **Next Actions** - What's next
 
-## Process
+## Process (AI-Driven)
 
-1. Gather context:
-   ```bash
-   git log --oneline -20
-   git diff --stat
-   ```
+1. **Gather Context Automatically**:
+   - Use `get_changed_files` to see what was edited.
+   - Use `run_in_terminal` with `git log --oneline -10` to see recent commits.
+   - Read `psi/inbox/focus.md` to understand the session goal.
+   - Review the current chat history for key decisions and friction points.
 
-2. Create directory:
-   ```bash
-   YEAR_MONTH=$(date +"%Y-%m")
-   DAY=$(date +"%d")
-   mkdir -p "psi/memory/retrospectives/${YEAR_MONTH}/${DAY}"
-   ```
+2. **Draft Retrospective**:
+   - Use `templates/retrospective.md` as the base.
+   - Fill in all sections based on gathered context.
+   - **AI Diary**: Write a genuine, vulnerable reflection on the session.
+   - **GitHub Integration**: If an Issue is linked in `focus.md`, include a section on whether to close it and draft the closing comment.
 
-3. Write retrospective using template
-
-4. Save with timestamp:
-   ```bash
-   TIME_DOT=$(date +"%H.%M")
-   # psi/memory/retrospectives/YYYY-MM/DD/HH.MM_slug.md
-   ```
+3. **Create Directory & Save**:
+   - Determine path: `psi/memory/retrospectives/YYYY-MM/DD/HH.MM_[slug].md`
+   - Create necessary directories.
+   - Save the file and present it to the human for final approval.
 
 ## Quality Standards
 
