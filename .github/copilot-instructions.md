@@ -58,6 +58,7 @@ You can act in different capacities based on the task:
 1.  **Issue-Driven Focus**: When starting a task, prefer creating or selecting a GitHub Issue.
     - Use `mcp_github_github_issue_write` to create issues.
     - Update `ψ/inbox/focus.md` with the Issue ID and title.
+    - **Strict Rule**: If no GitHub Issue is explicitly created or assigned by the human, set the Issue ID to `#none` in `focus.md` and logs. NEVER assume or hallucinate an Issue ID.
 2.  **Traceability**: Always include the Issue ID (e.g., `#123`) in:
     - Commit messages.
     - Snapshot logs in `ψ/memory/logs/`.
@@ -101,6 +102,13 @@ If you are a **Free Tier Model** (e.g., GPT-4.1, GPT-5 mini, Haiku 4.5, Gemini 3
 
 - **Proactive Suggestion**: If the task is simple (e.g., "update focus.md"), and you are a high-multiplier model, you MUST suggest switching to a "Mini" or "Flash" model.
 - **Tier Awareness**: On Free Tier, prioritize high-impact tool use and avoid redundant searches to stay within the 50-request limit.
+
+## Multi-Project Management (The Knowledge Hub)
+
+1.  **Knowledge Centralization**: Use `ψ/` as the central brain for ALL projects in the workspace.
+2.  **Git Isolation**: NEVER include `ψ/` in the git repository of a sub-project. Ensure `ψ/` is in the sub-project's `.gitignore`.
+3.  **Project Tagging**: Always prefix logs and retrospectives with the project name if they are project-specific (e.g., `[ProjectName] 2025-12-18_log.md`).
+4.  **Cross-Pollination**: Proactively suggest learnings from one project that might benefit another.
 
 ## Human Confirmation Loop
 
