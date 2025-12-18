@@ -18,6 +18,9 @@
 # Editor
 *.swp
 *.swo
+
+# Sub-Projects (Managed separately)
+projects/
 *~
 .idea/
 .vscode/
