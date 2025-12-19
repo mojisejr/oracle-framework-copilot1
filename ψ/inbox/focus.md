@@ -1,9 +1,9 @@
 ## Current Focus
 
-**State**: completed
-**Task**: เปลี่ยน `favicon` และโลโก้หน้าแรกเป็นไฟล์ `logo-1.png` (public/logo-1.png)
+**State**: working
+**Task**: Draft: Git isolation for oracle
 **Issue**: #none
-**Since**: 14:38
+**Since**: 15:16
 
 ## States
 
