@@ -1,9 +1,9 @@
 ## Current Focus
 
 **State**: completed
-**Task**: Finalized Git isolation writing
-**Issue**: #none
-**Since**: 15:16
+**Task**: Refactor refresh button and pull refresh mechanism
+**Issue**: #52
+**Since**: 22:08
 
 ## States
 
