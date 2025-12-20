@@ -19,7 +19,7 @@ snapshot [description]
    - Slug: Create a URL-friendly slug from the description.
 
 3. **Create File**:
-   - Path: `psi/memory/logs/YYYY-MM-DD_HH-MM_[slug].md`
+   - Path: `psi/memory/logs/<project>/YYYY-MM-DD_HH-MM_[slug].md`
    - Use the standard Snapshot format.
 
 4. **Confirm**:

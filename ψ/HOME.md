@@ -19,6 +19,9 @@ memory/
 ├── retrospectives/   # Session narratives (by date)
 ├── learnings/        # Extracted patterns
 ├── logs/             # Quick snapshots
+│   ├── <project>/    # Project-specific logs
+│   ├── oracle/       # System logs
+│   └── shared/       # General logs
 └── resonance/        # Core identity, soul
 ```
 

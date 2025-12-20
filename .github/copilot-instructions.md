@@ -108,7 +108,7 @@ If you are a **Free Tier Model** (e.g., GPT-4.1, GPT-5 mini, Haiku 4.5, Gemini 3
 
 1.  **Knowledge Centralization**: Use `ψ/` as the central brain for ALL projects in the workspace.
 2.  **Git Isolation**: NEVER include `ψ/` in the git repository of a sub-project. Ensure `ψ/` is in the sub-project's `.gitignore`.
-3.  **Project Tagging**: Always prefix logs and retrospectives with the project name if they are project-specific (e.g., `[ProjectName] 2025-12-18_log.md`).
+3.  **Project-Scoped Logs**: Always store logs in `ψ/memory/logs/<project_name>/`. Use `ψ/memory/logs/shared/` for cross-project insights and `ψ/memory/logs/oracle/` for system-level logs.
 4.  **Cross-Pollination**: Proactively suggest learnings from one project that might benefit another.
 
 ## Human Confirmation Loop

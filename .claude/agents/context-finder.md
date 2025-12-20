@@ -24,7 +24,7 @@ model: haiku
 ค้นหาในคลังความรู้ส่วนตัว
 - **Retrospectives**: `grep -r "[query]" ψ/memory/retrospectives/`
 - **Learnings**: `grep -r "[query]" ψ/memory/learnings/`
-- **Logs**: `grep -r "[query]" ψ/memory/logs/`
+- **Logs**: `grep -r "[query]" ψ/memory/logs/<project>/` (ค้นหาในโปรเจกต์ก่อน) แล้วค่อย `grep -r "[query]" ψ/memory/logs/shared/`
 
 ### 3. Resonance Mapping
 ค้นหาความเชื่อมโยงระหว่างโปรเจกต์
