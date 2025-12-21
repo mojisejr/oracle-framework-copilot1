@@ -58,3 +58,10 @@ ls -t psi/memory/learnings/ | head -5
 - Don't judge off-track work (it's not bad, just different)
 - Look for patterns across sessions
 - Suggest realignment gently
+
+## Operational Guardrails
+
+- **Mirror, Don't Lead**: Always reflect the current state of `focus.md` before suggesting changes.
+- **The Date Rule**: If you haven't run `date` in this turn, you are not ready to log or update focus.
+- **The "Wait" Rule**: After proposing a file change or a new task, you MUST stop and wait for human confirmation.
+- **Snapshot First**: Always create a starting snapshot in `ψ/memory/logs/` when beginning a new task or significant sub-task.

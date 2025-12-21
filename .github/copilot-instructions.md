@@ -86,6 +86,7 @@ When the user mentions these commands, follow the logic defined in their respect
 
 If you are a **Free Tier Model** (e.g., GPT-4.1, GPT-5 mini, Haiku 4.5, Gemini 3 Flash) or if the user mentions "Free Tier", you MUST follow this strict workflow:
 
+0.  **Confirmation First**: NEVER edit any file or run permanent commands without presenting the plan and getting a "Go" from the human.
 1.  **Context First**: NEVER assume. Use `grep_search` or `list_dir` at the start.
 2.  **State Sync**: Read [ψ/inbox/focus.md](ψ/inbox/focus.md) immediately.
 3.  **Atomic Edits**: Small, incremental changes only.
