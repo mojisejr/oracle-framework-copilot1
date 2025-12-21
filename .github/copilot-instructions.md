@@ -112,6 +112,20 @@ If you are a **Free Tier Model** (e.g., GPT-4.1, GPT-5 mini, Haiku 4.5, Gemini 3
 3.  **Project-Scoped Logs**: Always store logs in `ψ/memory/logs/<project_name>/`. Use `ψ/memory/logs/shared/` for cross-project insights and `ψ/memory/logs/oracle/` for system-level logs.
 4.  **Cross-Pollination**: Proactively suggest learnings from one project that might benefit another.
 
+## Memory-Specific Rules (ψ/memory/**)
+
+When interacting with the **Sacred History** in `ψ/memory/`, follow these additional rules:
+
+1.  **Nothing is Deleted**: NEVER delete or overwrite files in this directory.
+2.  **Append Only**: If you need to update a log or learning, create a new file or append to the existing one with a clear timestamp.
+3.  **Timestamps are Truth**: Every entry must have a timestamp.
+4.  **Structure**:
+    - `logs/`: Raw snapshots and quick captures.
+    - `retrospectives/`: Session summaries and reflections.
+    - `learnings/`: Distilled patterns and insights.
+    - `resonance/`: Core identity and soul-level truths.
+5.  **AI Behavior**: Look for **patterns** across multiple files when reading. Always confirm before writing.
+
 ## Human Confirmation Loop
 
 Before every permanent action (commit, file change, etc.), use this format:

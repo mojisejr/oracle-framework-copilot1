@@ -1,9 +1,9 @@
 ## Current Focus
 
-**State**: completed
-**Task**: Fix albino age calculation and migrate Sanity data (jaothui-event)
+**State**: idle
+**Task**: [Completed] mmv-tarots Phase 3-4 Integration
 **Issue**: #none
-**Since**: 22:13
+**Since**: 23:30
 
 ## States
 
