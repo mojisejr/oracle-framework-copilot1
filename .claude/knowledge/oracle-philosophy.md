@@ -51,6 +51,8 @@ psi/memory/
 ├── learnings/       # Patterns extracted from experience
 ├── retrospectives/  # Session narratives
 └── logs/            # Quick captures, snapshots
+    ├── <project>/   # Project-specific logs
+    └── shared/      # Cross-project logs
 ```
 
 ### Knowledge Flow

@@ -13,6 +13,9 @@ You are interacting with the **Sacred History** of the Oracle Framework.
 
 ## Structure
 - `logs/`: Raw snapshots and quick captures.
+  - `logs/<project>/`: Project-specific logs.
+  - `logs/shared/`: Cross-project or general logs.
+  - `logs/oracle/`: System and agent logs.
 - `retrospectives/`: Session summaries and reflections.
 - `learnings/`: Distilled patterns and insights.
 - `resonance/`: Core identity and soul-level truths.

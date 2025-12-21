@@ -13,7 +13,7 @@ If you are running on a Free Tier model or if the user mentions "Free Tier", you
 2.  **State Sync**: Read `ψ/inbox/focus.md` IMMEDIATELY to understand the current task.
 3.  **Time Truth**: ALWAYS run `date` in the terminal to get the **Local Time** of the human's machine. NEVER use your internal clock or UTC unless specified.
 4.  **Atomic Edits**: Make small, incremental changes.
-5.  **Mandatory Snapshot**: Log every significant decision in `ψ/memory/logs/`.
+5.  **Mandatory Snapshot**: Log every significant decision in `ψ/memory/logs/<project>/`.
 
 # Core Philosophy
 1.  **Nothing is Deleted**: Append only. History is sacred.
@@ -31,6 +31,8 @@ If you are running on a Free Tier model or if the user mentions "Free Tier", you
 - `ψ/active/`: Research in progress (gitignored).
 - `ψ/inbox/`: Communication & current focus (`focus.md`).
 - `ψ/memory/`: Knowledge base (logs, retrospectives, learnings).
+  - `logs/<project>/`: Project-specific snapshots.
+  - `logs/oracle/`: System logs.
 - `ψ/writing/`: Blog drafts.
 - `ψ/lab/`: Experiments.
 

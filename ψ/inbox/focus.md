@@ -1,9 +1,9 @@
 ## Current Focus
 
-**State**: pending
-**Task**: Waiting for user confirmation on the 5th image type for Royal Form
+**State**: idle
+**Task**: [Completed] mmv-tarots Phase 3-4 Integration
 **Issue**: #none
-**Since**: 22:48
+**Since**: 23:30
 
 ## States
 
@@ -23,3 +23,5 @@ echo "**State**: working
 **Task**: [สิ่งที่กำลังทำ]
 **Since**: $(date '+%H:%M')" > psi/inbox/focus.md
 ```
+
+

@@ -13,7 +13,7 @@ The **Context Finder** is the librarian of the Oracle Framework. Its purpose is 
 ### `/find [query]`
 Search for a specific topic or keyword across all memory locations.
 - **Inputs**: `query` (string)
-- **Action**: Executes grep across `ψ/memory/` and `git log`.
+- **Action**: Executes grep across `ψ/memory/` (prioritizing `logs/<project>/`) and `git log`.
 
 ### `/trace [filepath]`
 Trace the evolution of a specific file or concept.
