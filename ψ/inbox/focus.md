@@ -1,9 +1,9 @@
 ## Current Focus
 
 **State**: completed
-**Task**: Refactor Royal Form: Add buffaloImage2 and restore acceptance conditions (PR #99 created)
+**Task**: Fix albino age calculation and migrate Sanity data (jaothui-event)
 **Issue**: #none
-**Since**: 15:00
+**Since**: 22:13
 
 ## States
 
