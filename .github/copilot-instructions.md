@@ -119,7 +119,10 @@ When interacting with the **Sacred History** in `ψ/memory/`, follow these addit
 1.  **Nothing is Deleted**: NEVER delete or overwrite files in this directory.
 2.  **Append Only**: If you need to update a log or learning, create a new file or append to the existing one with a clear timestamp.
 3.  **Timestamps are Truth**: Every entry must have a timestamp.
-4.  **Structure**:
+4.  **Filename Format (CRITICAL)**:
+    - Logs in `ψ/memory/logs/` MUST follow: `YYYY-MM-DD_HH-mm_[slug].md`.
+    - Retrospectives in `ψ/memory/retrospectives/` MUST follow: `YYYY-MM-DD/HH.mm_[slug].md`.
+5.  **Structure**:
     - `logs/`: Raw snapshots and quick captures.
     - `retrospectives/`: Session summaries and reflections.
     - `learnings/`: Distilled patterns and insights.
