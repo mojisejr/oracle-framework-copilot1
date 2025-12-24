@@ -1,17 +1,15 @@
-**State**: idle
-**Task**: Waiting for next instructions
+**State**: active
+**Task**: UI Refactoring & Design Token Standardization
 **Issue**: #none
 **Snapshots**: 
 - [2025-12-24_14-17_pr-created.md](../memory/logs/mmv-tarots/2025-12-24_14-17_pr-created.md)
-**Since**: 2025-12-24 14:20 GMT+7
+**Since**: 2025-12-24 14:45 GMT+7
 
 ---
 
-Session completed: Implement Transaction History & Star Ledger
-- Added `CreditTransaction` model
-- Updated `CreditService` with atomic transactions
-- Refactored `StatusBadge` for context-aware labeling
-- Created PR #36
-- Retrospective: [2025-12/24/14.20_transaction-history-ledger.md](../memory/retrospectives/2025-12/24/14.20_transaction-history-ledger.md)
+Refactoring UI to use Design Tokens and fixing Z-index stacking issues.
+- Replacing hardcoded colors with `bg-background`, `text-foreground`, etc.
+- Fixing `LiquidBackground` obscuring content.
+- Standardizing semantic tokens in `tailwind.config.ts`.
 
 

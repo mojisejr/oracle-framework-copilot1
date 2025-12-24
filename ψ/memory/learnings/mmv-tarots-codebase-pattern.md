@@ -17,7 +17,11 @@ status: distilled
 - **Colors**:
   - `primary`: Coral/Red (#F27669) - ใช้สำหรับปุ่มหลักและจุดเน้น
   - `accent`: Gold/Yellow (#FCBD74) - ใช้สำหรับองค์ประกอบที่ต้องการความหรูหรา/ไพ่ทาโรต์
-  - `success`: LINE Green (#06C755) - ใช้สำหรับปุ่ม Login และสถานะสำเร็จ
+  - `success`: LINE Green (#00B900) - ใช้สำหรับปุ่ม Login และสถานะสำเร็จ
+  - `warning`: Amber (#f59e0b) - ใช้สำหรับสถานะรอดำเนินการ
+  - `info`: Blue (#3b82f6) - ใช้สำหรับสถานะกำลังประมวลผล
+  - `destructive`: Red (#ef4444) - ใช้สำหรับสถานะล้มเหลว
+  - `background`: Dark Gray (#2a2a2e) - พื้นหลังหลักของระบบ
   - `glass`: โปร่งใส (rgba 255, 255, 255, 0.1) พร้อม `backdrop-blur`
 - **Typography**:
   - `font-sans`: **Montserrat** - ใช้สำหรับเนื้อหาทั่วไปและ UI
