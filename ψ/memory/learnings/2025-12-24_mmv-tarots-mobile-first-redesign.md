@@ -20,6 +20,8 @@ The `mmv-tarots` application has been successfully refactored from a desktop-fir
 
 ### 2.2. Component Modernization (Glassmorphism 2.0)
 - **Floating Pill Input**: Redesigned `QuestionInput` from a heavy card to a "Floating Pill" layout. This detached the Send button from the text area, significantly improving ergonomics for one-handed use.
+- **Validation Strategy (New)**: Shifted from "Blocking Input" (`maxLength`) to "Visual Warning" (Red Counter + Disabled Button). This allows the user to see their excess input and correct it, providing a more conversational and less restrictive UX.
+- **Strict UI Locking**: Implemented `pointer-events-none` on disabled states to ensure zero interaction leak when validation fails.
 - **High-Density Borders**: Switched to `border-[0.5px]` for a more premium look on high-DPI mobile screens.
 - **Optimized Blurs**: Reduced `backdrop-blur-xl` to `backdrop-blur-md` in performance-critical areas to maintain 60fps on mid-range devices.
 
@@ -39,6 +41,8 @@ The `mmv-tarots` application has been successfully refactored from a desktop-fir
 ## 3. Technical Challenges & Solutions
 - **UI Overlap**: Initial implementation of `BottomNav` overlapped with the fixed `QuestionInput`.
     - *Solution*: Lifted the input container to `bottom-24` on mobile and used a detached pill design to create "breathable" space.
+- **Badge Conflict**: Status badges (Stars, Ready status) overlapped with the input area on small screens.
+    - *Solution*: Implemented responsive positioning for badges, moving them to a floating row above the input (`-top-8`) on mobile devices.
 - **Reference Errors**: A `ReferenceError` occurred during refactoring due to missing props in the `QuestionInput` interface.
     - *Solution*: Standardized the interface to include `isSubmitting` and ensured proper prop drilling from the parent page.
 
