@@ -8,9 +8,9 @@
 
 | Variable | Status | Note |
 | :--- | :---: | :--- |
-| `STRIPE_SECRET_KEY` | ✅ | พร้อมใช้งาน (sk_test_...) |
-| `STRIPE_PUBLISHABLE_KEY` | ✅ | พร้อมใช้งาน (pk_test_...) |
-| `STRIPE_WEBHOOK_SECRET` | ✅ | พร้อมใช้งาน (whsec_...) |
+| `STRIPE_SECRET_KEY` | ✅ | พร้อมใช้งาน (sk_test_***) |
+| `STRIPE_PUBLISHABLE_KEY` | ✅ | พร้อมใช้งาน (pk_test_***) |
+| `STRIPE_WEBHOOK_SECRET` | ✅ | พร้อมใช้งาน (whsec_***) |
 | `NEXT_PUBLIC_APP_URL` | ✅ | ตั้งค่าเป็น http://localhost:3000 |
 | `DATABASE_URL` | ✅ | เชื่อมต่อกับ Neon Postgres เรียบร้อย |
 
