@@ -1,5 +1,5 @@
-**State**: completed 
-**Task**: Implement Referral Link System (mmv-tarots)
+**State**: in-progress
+**Task**: Redesign Reading Result Page UX/UI (mmv-tarots)
 **Issue**: #none
 **Snapshots**: 
 - [2025-12-26_21-48_user-journey-audit-plan.md](../memory/logs/mmv-tarots/2025-12-26_21-48_user-journey-audit-plan.md)
@@ -9,16 +9,19 @@
 - [2025-12-26_23-01_referral-implementation-plan.md](../memory/logs/mmv-tarots/2025-12-26_23-01_referral-implementation-plan.md)
 - [2025-12-26_23-06_referral-implementation-complete.md](../memory/logs/mmv-tarots/2025-12-26_23-06_referral-implementation-complete.md)
 - [2025-12-26/23.14_referral-system-complete.md](../memory/retrospectives/2025-12/26/23.14_referral-system-complete.md)
-**Since**: 2025-12-26 22:45 GMT+7
+- [2025-12-27_00-00_reading-result-ui-redesign.md](../memory/logs/mmv-tarots/2025-12-27_00-00_reading-result-ui-redesign.md)
+- [2025-12-27_15-52_reading-result-ui-redesign-complete.md](../memory/logs/mmv-tarots/2025-12-27_15-52_reading-result-ui-redesign-complete.md)
+- [2025-12-27_16-10_card-spread-design.md](../memory/logs/mmv-tarots/2025-12-27_16-10_card-spread-design.md)
+- [2025-12-27_16-47_reading-result-refactor-summary.md](../memory/logs/mmv-tarots/2025-12-27_16-47_reading-result-refactor-summary.md)
+**Since**: 2025-12-27 00:00 GMT+7
 
 ---
 
-✅ Referral System Implementation Complete (4 Phases)
-- Phase 1: Database Schema & CreditService (+2 Stars Referrer, +1 Star Referee)
-- Phase 2: Middleware captures ?ref=CODE into mmv_ref cookie
-- Phase 3: API endpoint processes rewards on profile load
-- Phase 4: UI shows referral link with copy button (Thai)
-Build: 100% Pass | Migration: Successful | Ready for Testing
-Session Retrospective Completed.
+🎯 Redesigning Reading Result Page UX/UI
+- Remove individual card interpretations from the main view to reduce clutter.
+- Implement a Modal system to show card details on click.
+- Fix "Card-in-Card" nesting issues for a cleaner, more modern look.
+- Improve overall readability and spacing of the prediction result.
+
 
 
