@@ -1,6 +1,9 @@
-# Active research (ephemeral)
+# Oracle Framework (External Brain)
+# Only ignore active research, keep memory and writing
 ψ/active/*
 !ψ/active/.gitkeep
+ψ/lab/*
+!ψ/lab/.gitkeep
 
 # Incubation projects
 ψ/incubate/*
