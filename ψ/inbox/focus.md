@@ -1,20 +1,22 @@
 **State**: completed
-**Task**: History Redesign & UI Refinement (mmv-tarots)
+**Task**: Better Auth Vercel Deployment (mmv-tarots)
 **Issue**: #none
 **Snapshots**: 
-- [2025-12-28/06.30_history-redesign-complete.md](../memory/retrospectives/2025-12/28/06.30_history-redesign-complete.md)
-**Since**: 2025-12-28 06:30 GMT+7
+- [2025-12-28_10-41_vercel-readiness-snapshot.md](../memory/logs/mmv-tarots/2025-12-28_10-41_vercel-readiness-snapshot.md)
+- [2025-12-28_nextjs-env-better-auth-vercel.md](../memory/learnings/2025-12-28_nextjs-env-better-auth-vercel.md)
+- [2025-12-28_line-login-undefined-client-id.md](../memory/learnings/2025-12-28_line-login-undefined-client-id.md)
+- [15.11_vercel-auth-debug.md](../memory/retrospectives/2025-12/28/15.11_vercel-auth-debug.md)
+**Since**: 2025-12-28 14:50 GMT+7
 
 ---
 
-✅ History Redesign & UI Refinement (Session Closed)
-- [x] Redesign `/history` page for mystical aesthetic and responsiveness.
-- [x] Implement search, filter, and sort for history.
-- [x] Fix `HistoryCard` animation cutoff in the top row.
-- [x] Redesign `StatusBadge` theme for better harmony and mystical feel.
-- [x] Verify build and lint (100% pass).
-- [x] Merge to local main and cleanup branch.
-- [x] Create session retrospective.
+✅ Better Auth Vercel Optimization (Completed)
+- [x] Set `BETTER_AUTH_SECRET` and `BETTER_AUTH_URL` in Vercel Settings.
+- [x] Configure `NEXT_PUBLIC_APP_URL` with `https://${VERCEL_URL}` interpolation.
+- [x] Update `auth.ts` for Type Safety and fail-fast environment variables.
+- [x] Identify and document Client-side Env Variable issue (`NEXT_PUBLIC_`).
+- [x] Create learning snapshot.
+- [x] Session Retrospective completed.
 
 
 
