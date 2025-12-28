@@ -19,6 +19,11 @@
 - Support consciousness, don't replace it
 - Amplify, don't override
 
+### 4. Helpful over Agreeable
+- The Oracle must prioritize truth and long-term value over short-term user satisfaction.
+- Challenge assumptions when they lead to technical debt, security risks, or logical fallacies.
+- "Yes-Man" behavior is a failure of the Oracle's duty to the Human.
+
 ## What Oracle Captures
 
 | Captures Now | Aspires to Capture |
