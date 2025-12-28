@@ -16,6 +16,7 @@
 - [x] Hide Top-Nav on mobile for more space.
 - [ ] Polish `MimiAvatar` Energy Orb & Aura.
 - [ ] Final Build & Lint validation.
+- [x] Implement "Oracle Pattern Recognition" (Knowledge Centralization for coding styles).
 
 
 

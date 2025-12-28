@@ -78,7 +78,9 @@ When the user mentions these commands, follow the logic defined in their respect
 ## Session Workflow
 
 1.  **Start (Model Check)**: Identify your current model and tier. If using a high-multiplier model for a simple task, suggest a switch. If on Free Tier, activate "Tier Optimization" protocol.
-2.  **Sync**: Check [ψ/inbox/focus.md](ψ/inbox/focus.md) for the current task.
+2.  **Sync & Pre-flight**: 
+    - Check [ψ/inbox/focus.md](ψ/inbox/focus.md) for the current task.
+    - **CRITICAL**: Read [ψ/memory/learnings/2025-12-28_universal-oracle-coding-standard.md](ψ/memory/learnings/2025-12-28_universal-oracle-coding-standard.md) to align with the human's coding preferences (Functional, Strict Type, Simple/Robust).
 3.  **Work**: Append to logs in `ψ/memory/logs/` as needed.
 4.  **End**: When the user says "rrr" or "finish session", help them create a retrospective.
 5.  **Distill**: Periodically help the user move patterns from retrospectives to `ψ/memory/learnings/`.
