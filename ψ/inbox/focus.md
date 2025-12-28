@@ -1,22 +1,21 @@
-**State**: completed
-**Task**: Better Auth Vercel Deployment (mmv-tarots)
+**State**: in-progress
+**Task**: Redesign Home Page (Mobile-First & Sai Mu)
 **Issue**: #none
 **Snapshots**: 
-- [2025-12-28_10-41_vercel-readiness-snapshot.md](../memory/logs/mmv-tarots/2025-12-28_10-41_vercel-readiness-snapshot.md)
-- [2025-12-28_nextjs-env-better-auth-vercel.md](../memory/learnings/2025-12-28_nextjs-env-better-auth-vercel.md)
-- [2025-12-28_line-login-undefined-client-id.md](../memory/learnings/2025-12-28_line-login-undefined-client-id.md)
-- [15.11_vercel-auth-debug.md](../memory/retrospectives/2025-12/28/15.11_vercel-auth-debug.md)
-**Since**: 2025-12-28 14:50 GMT+7
+- [2025-12-28_15-20_redesign-planning.md](../memory/logs/mmv-tarots/2025-12-28_15-20_redesign-planning.md)
+- [2025-12-28_15-30_redesign-implementation-plan.md](../memory/logs/mmv-tarots/2025-12-28_15-30_redesign-implementation-plan.md)
+- [2025-12-28_15-48_redesign-completion-snapshot.md](../memory/logs/mmv-tarots/2025-12-28_15-48_redesign-completion-snapshot.md)
+- [2025-12-28_16-00_layout-optimization-snapshot.md](../memory/logs/mmv-tarots/2025-12-28_16-00_layout-optimization-snapshot.md)
+**Since**: 2025-12-28 15:20 GMT+7
 
 ---
 
-✅ Better Auth Vercel Optimization (Completed)
-- [x] Set `BETTER_AUTH_SECRET` and `BETTER_AUTH_URL` in Vercel Settings.
-- [x] Configure `NEXT_PUBLIC_APP_URL` with `https://${VERCEL_URL}` interpolation.
-- [x] Update `auth.ts` for Type Safety and fail-fast environment variables.
-- [x] Identify and document Client-side Env Variable issue (`NEXT_PUBLIC_`).
-- [x] Create learning snapshot.
-- [x] Session Retrospective completed.
+🎯 Redesign Home Page (mmv-tarots)
+- [x] Refine `globals.css` for better "Sai Mu" atmosphere.
+- [x] Refactor `app/page.tsx` layout (Flexbox + Floating Input).
+- [x] Hide Top-Nav on mobile for more space.
+- [ ] Polish `MimiAvatar` Energy Orb & Aura.
+- [ ] Final Build & Lint validation.
 
 
 
