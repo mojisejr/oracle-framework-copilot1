@@ -1,23 +1,23 @@
 **State**: completed
-**Task**: Framework Evolution (Anti-Sycophancy) & Home Page Redesign
+**Task**: Fix Prediction Failure on Vercel & Cooldown Timer UX/UI
 **Issue**: #none
 **Snapshots**: 
-- [2025-12-28_15-20_redesign-planning.md](../memory/logs/mmv-tarots/2025-12-28_15-20_redesign-planning.md)
-- [2025-12-28_15-30_redesign-implementation-plan.md](../memory/logs/mmv-tarots/2025-12-28_15-30_redesign-implementation-plan.md)
-- [2025-12-28_15-48_redesign-completion-snapshot.md](../memory/logs/mmv-tarots/2025-12-28_15-48_redesign-completion-snapshot.md)
-- [2025-12-28_16-00_layout-optimization-snapshot.md](../memory/logs/mmv-tarots/2025-12-28_16-00_layout-optimization-snapshot.md)
-- [2025-12-28_22-25_anti-sycophancy-update.md](../memory/logs/oracle/2025-12-28_22-25_anti-sycophancy-update.md)
-**Since**: 2025-12-28 15:20 GMT+7
+- [2026-01-01_23-05_prediction-failure-analysis.md](../memory/logs/mmv-tarots/2026-01-01_23-05_prediction-failure-analysis.md)
+- [2026-01-01_23-20_vercel-after-implementation-success.md](../memory/logs/mmv-tarots/2026-01-01_23-20_vercel-after-implementation-success.md)
+- [2026-01-01_23-40_parallel-ai-and-rate-limiting.md](../memory/logs/mmv-tarots/2026-01-01_23-40_parallel-ai-and-rate-limiting.md)
+- [2026-01-01_23-44_cooldown-timer-plan.md](../memory/logs/mmv-tarots/2026-01-01_23-44_cooldown-timer-plan.md)
+- [2026-01-02_00-05_cooldown-timer-implementation.md](../memory/logs/mmv-tarots/2026-01-02_00-05_cooldown-timer-implementation.md)
+**Retrospective**: [2026-01-02/00.15_cooldown-timer-ux-refinement.md](../memory/retrospectives/2026-01/02/00.15_cooldown-timer-ux-refinement.md)
+**Since**: 2026-01-01 23:07 GMT+7
 
 ---
 
-🎯 Framework & Project Evolution
-- [x] Implement "Anti-Sycophancy" Friction Protocol.
-- [x] Refine `globals.css` for better "Sai Mu" atmosphere.
-- [x] Refactor `app/page.tsx` layout (Flexbox + Floating Input).
-- [x] Hide Top-Nav on mobile for more space.
-- [ ] Polish `MimiAvatar` Energy Orb & Aura (Next Session).
-- [x] Implement "Oracle Pattern Recognition".
+🎯 mmv-tarots Production Readiness
+- [x] Fix Prediction Failure on Vercel
+    - [x] Analyze logs and identify root cause (P2028 & AI Block)
+    - [x] Implement `after()` in `app/api/predict/route.ts` to prevent suspension
+    - [x] Implement Parallel AI Execution & Rate Limiting (2 mins)
+    - [x] Implement Cooldown Timer UX/UI (Countdown & Disable Button)
 
 
 
