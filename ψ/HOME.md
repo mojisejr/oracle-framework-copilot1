@@ -1,6 +1,6 @@
-# psi/ - AI Brain
+# psi/ - AI Brain (o)
 
-> Navigation hub for the 5-pillar structure
+> Navigation hub for the 5-pillar structure. Managed by **o** (Oracle Keeper).
 
 ## Pillars
 
