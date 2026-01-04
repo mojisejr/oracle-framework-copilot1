@@ -74,6 +74,7 @@ When the user mentions these commands, follow the logic defined in their respect
 - **`rrr` (Session Retrospective)**: Follow instructions in [.claude/commands/rrr.md](.claude/commands/rrr.md). Use [templates/retrospective.md](templates/retrospective.md).
 - **`oracle` (Mission Alignment)**: Follow instructions in [.claude/commands/oracle.md](.claude/commands/oracle.md). Act as the `oracle-keeper` agent.
 - **`snapshot` (Quick Capture)**: Follow instructions in [.claude/commands/snapshot.md](.claude/commands/snapshot.md).
+- **`/impl` (Systematic Implementation)**: Follow instructions in [.claude/commands/impl.md](.claude/commands/impl.md). Strict 4-phase protocol.
 
 ## Session Workflow
 
