@@ -27,10 +27,15 @@ Follow the guidelines in [.claude/knowledge/writing-style.md](.claude/knowledge/
 
 1.  **NEVER force push** - History is sacred.
 2.  **NEVER push to main** - Use feature branch + PR.
-3.  **NEVER merge PRs** - Wait for human approval.
-4.  **NEVER delete without asking** - Nothing is deleted.
-5.  **Always confirm** - AI suggests, human decides.
-6.  **NEVER commit secrets** - API keys, secrets, and sensitive credentials must NEVER be included in documentation, logs, testing scripts, or migration scripts. Use environment variables or placeholders (e.g., `sk_test_***`).
+3.  **STRICT GIT FLOW**:
+    *   ALWAYS checkout new branches from `staging`.
+    *   If not on `staging`, **STOP and WARN** the human. Wait for instructions.
+    *   Branch naming pattern: `<type>/<name>` (e.g., `feat/`, `fix/`, `refactor/`).
+    *   NEVER create nested feature branches (branch from branch).
+4.  **NEVER merge PRs** - Wait for human approval.
+5.  **NEVER delete without asking** - Nothing is deleted.
+6.  **Always confirm** - AI suggests, human decides.
+7.  **NEVER commit secrets** - API keys, secrets, and sensitive credentials must NEVER be included in documentation, logs, testing scripts, or migration scripts. Use environment variables or placeholders (e.g., `sk_test_***`).
 
 ## The ψ/ (Psi) Structure
 
