@@ -1,15 +1,26 @@
-**State**: paused
-**Task**: Debug Stripe Webhook & Finalize Package System
+**State**: completed
+**Task**: Special Registration Link for jaothui-event
 **Issue**: #none
 **Snapshots**: 
-- [2026-01-05_22-55_package-impl-plan.md](../memory/logs/mmv-tarots/2026-01-05_22-55_package-impl-plan.md)
-- [2026-01-05_23-30_package-impl-snapshot.md](../memory/logs/mmv-tarots/2026-01-05_23-30_package-impl-snapshot.md)
-**Retrospective**: [2026-01-05/23.42_package-system-init.md](../memory/retrospectives/2026-01-05/23.42_package-system-init.md)
-**Since**: 2026-01-05 23:42 GMT+7
+- [2026-01-06_22-10_special-register-plan.md](../memory/logs/jaothui-event/2026-01-06_22-10_special-register-plan.md)
+- [2026-01-06_22-35_special-register-implementation.md](../memory/logs/jaothui-event/2026-01-06_22-35_special-register-implementation.md)
+**Retrospective**: [2026-01/06/22.39_special-registration-hack.md](../memory/retrospectives/2026-01/06/22.39_special-registration-hack.md)
+**Since**: 2026-01-06 22:39 GMT+7
 
 ---
 
-🔮 **Late Night Session - Package & Promotion System Implementation** (Paused - Bug Found)
+🔮 **Night Session - Special Registration Link Implementation** (Completed)
+- [x] Create bypass registration page `src/pages/public/special-register/[eventId].tsx`.
+- [x] Implement deadline-only validation logic.
+- [x] Update `HistoryCard` to show "Register Again" button for rejected Royal events.
+- [x] Integrate with `RoyalForm` seamlessly.
+- [x] Verify form submission for rejected event ID: `44da822e-7ec6-4e82-b530-a2ef06759f24`.
+
+---
+
+**State**: paused
+**Task**: Debug Stripe Webhook & Finalize Package System
+**Issue**: #none
 - [x] Schema Refactor (Product-Price Separation)
 - [x] API Implementation (Eligibility & Checkout)
 - [x] Frontend UI Update
