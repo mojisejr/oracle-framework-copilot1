@@ -1,44 +1,37 @@
 # Current Focus 🎯
 
 **State**: completed
-**Task**: Implementation: Burst & Breathe Cooldown System (mmv-tarots)
+**Task**: Implementation: Manual Selection for Special competition classes (jaothui-event)
 **Issue**: #none
 **Snapshots**: 
-- [2026-01-08_22-43_burst-breathe-blueprint.md](../memory/logs/mmv-tarots/2026-01-08_22-43_burst-breathe-blueprint.md)
-- [2026-01-08_23-55_stale-quota-deep-dive.md](../memory/logs/mmv-tarots/2026-01-08_23-55_stale-quota-deep-dive.md)
-- [2026-01-09_00-30_burst-breathe-final-polish.md](../memory/logs/mmv-tarots/2026-01-09_00-30_burst-breathe-final-polish.md)
-**Retrospective**: [2026-01-09/00.23_burst-and-breathe-ux.md](../memory/retrospectives/2026-01/09/00.23_burst-and-breathe-ux.md)
-**Learning**: [2026-01-09_stateless-rate-limiting-ux.md](../memory/learnings/2026-01-09_stateless-rate-limiting-ux.md)
-**Since**: 2026-01-08 22:43 GMT+7
+- [2026-01-09_14-32_manual-selection-analysis.md](../memory/logs/jaothui-event/2026-01-09_14-32_manual-selection-analysis.md)
+- [2026-01-09_14-39_impl-manual-selection.md](../memory/logs/jaothui-event/2026-01-09_14-39_impl-manual-selection.md)
+- [2026-01-09_16-04_impl-manual-selection-sp-marker.md](../memory/logs/jaothui-event/2026-01-09_16-04_impl-manual-selection-sp-marker.md)
+**Retrospective**: [2026-01/09/16.56_implement-manual-selection.md](../memory/retrospectives/2026-01/09/16.56_implement-manual-selection.md)
+**Learning**: [2026-01-09_sp-marker-pattern-state-loops.md](../memory/learnings/2026-01-09_sp-marker-pattern-state-loops.md)
+**Since**: 2026-01-09 14:31 GMT+7
 
 ---
 
 ## Progress Summary
-- [x] **Burst & Breathe Implementation**
-  - [x] Switched to **Stateless Token Bucket** (no DB migration needed).
-  - [x] Created `lib/server/rate-limit.ts` for capacity logic.
-  - [x] Updated `/api/predict` to enforce dynamic cooldown.
-  - [x] Updated `/api/credits/balance` to provide concentration data.
-- [x] **Frontend UI Refinement**
-  - [x] Implemented `QuestionInput` with 🔮 indicator logic.
-  - [x] Fixed synchronization via `NavigationProvider`.
-  - [x] Resolved "Invisible Icons" bug (Post-mortem in snapshot).
-
----
-*Next Move: User verification on next question burst.*
-- [ ] แก้ไขปัญหา Quota ไม่รีเฟรชอิงตามเวลาจริง (Stale State / Caching) #none
-- [ ] Snapshot แผนการแก้ไข "The Invisible Refill" ปัญหา Caching และ Logic Boundary
-- [ ] **Phase 4: Verification**
-  - [ ] Test consecutive 3-question bursts.
-  - [ ] Verify 30s delay enforcement.
+- [x] **Phase 1: Analysis & UI Design**
+  - [x] Recap current Auto-detect logic via FormV3.
+  - [x] Identified classes that cannot be auto-detected (Dwarf, Mother-offspring, etc.).
+  - [x] Design UI for Manual Override / Selection.
+- [x] **Phase 2: Implementation**
+  - [x] Backend & Utils update for special class filtering.
+  - [x] FormV3 manual mode state & logic.
+  - [x] UI Toggle & Dropdown implementation.
+- [x] **Phase 3: Verification**
+  - [x] Fixed build errors (TS length checks).
+  - [x] `npm run build` passed 100%.
+  - [x] Committed to `feat/frontend-manual-selection`.
 
 ---
 
 ### History (Pinned)
+- [x] #none - Implementation: Burst & Breathe Cooldown System (mmv-tarots)
 - [x] #none - Lab Tooling: Royal Form Export Prototype (FINAL)
-  - Successfully built Python CLI for legacy Excel export.
-- [x] #none - Implement Referral Program x Social Sharing
-  - Implemented on branch `feat/referral-sharing` -> Merged to `staging`.
 
 
 
