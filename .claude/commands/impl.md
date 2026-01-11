@@ -15,8 +15,15 @@ When receiving the `/impl` command, you MUST follow these 5 phases in order. Do 
 ### Phase 0: Orchestration (Strategic Dispatch)
 **"Divide and Conquer."**
 1. **Complexity Check**: Evaluate if the task can be parallelized (The Strategy Matrix).
-2. **Establish Consensus**: Define File Ownership and Shared Contracts.
-3. **Delegation**: If Parallel, dispatch Remote Agents via GitHub Issues. Create a `consensus-log` in `ψ/memory/logs/`.
+2. **Establish Consensus**: Define File Ownership, Shared Contracts, and **Base Branch** (Strictly `staging` for all Oracle projects).
+3. **Multi-Repo Delegation Rule**:
+    *   **Root Framework Tasks**: Use `github-pull-request_copilot-coding-agent` (Direct Warp).
+    *   **Sub-Project Tasks (projects/*)**: MUST use **Issue-Based Delegation**. Create a GitHub Issue in the target repository and use `mcp_github_github_assign_copilot_to_issue`.
+4. **Targeting Rule**: When delegating or starting locally, the base branch MUST be `staging`. Instruct Remote Agents to open PRs against `staging` only.
+5. **Native Safety**: 
+    *   **NEVER** use `copilot /delegate` in CLI directly.
+    *   **ALWAYS** include `CONSENSUS_SCHEMA` and `Task Context` in the agent prompt.
+    *   **Monitor**: Add the generated PR link to `focus.md`.
 
 ### Phase 1: Grounding (Context First)
 **"Don't guess. Know."**
