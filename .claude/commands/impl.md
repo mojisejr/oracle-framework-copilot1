@@ -16,7 +16,10 @@ When receiving the `/impl` command, you MUST follow these 5 phases in order. Do 
 **"Divide and Conquer."**
 1. **Complexity Check**: Evaluate if the task can be parallelized (The Strategy Matrix).
 2. **Establish Consensus**: Define File Ownership and Shared Contracts.
-3. **Delegation**: If Parallel, dispatch Remote Agents via GitHub Issues. Create a `consensus-log` in `ψ/memory/logs/`.
+3. **Native Delegation**: If Parallel, USE `github-pull-request_copilot-coding-agent` to dispatch Remote Agents.
+    *   **NEVER** use `copilot /delegate` in CLI directly.
+    *   **ALWAYS** include `CONSENSUS_SCHEMA` and `Task Context` in the agent prompt.
+    *   **Monitor**: Add the generated PR link to `focus.md`.
 
 ### Phase 1: Grounding (Context First)
 **"Don't guess. Know."**

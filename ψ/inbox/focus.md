@@ -1,13 +1,14 @@
 # Current Focus 🎯
 
-**State**: completed
-**Task**: Implementation: Red Team Agent (The Auditor) & SEO Update
+**State**: in-progress
+**Task**: Implementation: Agentic Parallelism v2 (Delegation Integration)
 **Issue**: #none
 **Snapshots**: 
 - [2026-01-10_06-35_update-seo-metadata.md](../memory/logs/mmv-tarots/2026-01-10_06-35_update-seo-metadata.md)
 - [2026-01-10_06-45_red-team-agent-impl.md](../memory/logs/shared/2026-01-10_06-45_red-team-agent-impl.md)
+- [2026-01-11_20-25_delegation-integration-plan.md](../memory/logs/oracle/2026-01-11_20-25_delegation-integration-plan.md)
 **Retrospective**: [2026-01/10/07.00_seo-and-red-team-init.md](../memory/retrospectives/2026-01/10/07.00_seo-and-red-team-init.md)
-**Since**: 2026-01-10 06:42 GMT+7
+**Since**: 2026-01-11 20:20 GMT+7
 
 ---
 
@@ -16,13 +17,16 @@
   - [x] Propose metadata options.
   - [x] Apply Option 1 to `layout.tsx`.
   - [x] Validate SEO tags.
-- [ ] **Phase 2: Red Team Agent Implementation**
+- [x] **Phase 2: Red Team Agent Implementation**
   - [x] Define Agent Profile (`.claude/agents/red-team.md`).
-  - [ ] Design Audit Log Template.
-  - [ ] Integration Test (Internal Review).
-- [ ] **Phase 3: Initial Audit (Trial)**
+  - [x] Research `@cli /delegate` integration.
+- [ ] **Phase 3: Integration & Delegation Test**
+  - [ ] Update `.claude/commands/impl.md` with Delegation Logic.
+  - [ ] Test `@cli /delegate` through Oracle Orchestration.
+  - [ ] Verify Log Harvesting from Parallel Tasks.
+- [ ] **Phase 4: Initial Audit (Trial)**
   - [ ] Select project for pilot audit.
-  - [ ] Generate first audit report.
+  - [ ] Generate first audit report via Delegated Agent.
 
 ---
 
