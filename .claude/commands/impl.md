@@ -53,40 +53,47 @@ When receiving the `/impl` command, you MUST follow these 5 phases in order. Do 
 2.  **Build & Lint**: You MUST run build/lint commands.
 3.  **Fix**: Rectify any integration conflicts.
 
-## Output Template
+## Output Template (Mission Blueprint)
 
-When starting an `/impl` task, output this checklist:
+When starting or planning an `/impl` task, you MUST output a **Mission Blueprint**. This serves as the strategic agreement between the Conductor and the Human.
 
 ```markdown
-# 🛡️ Oracle Implementation Protocol (v2 Parallel)
+# 🛡️ Mission Blueprint: [Task Name]
 
-**Task**: [Task Name]
-**Context**: [Oracle Framework | Sub-Project: Name]
-**Strategy**: [Solo | Parallel (Fleet: @agent1, @agent2)]
+**Task**: Brief description
+**Orchestration Strategy**: [Solo | Parallel (Fleet Mode)]
+**Target Environment**: [Project Path + Repository Name]
+**Base Branch**: `staging`
 
-## Phase 0: Orchestration
+## 1. Complexity & Delegation Analysis
+Identify if tasks can be split.
+
+| Node | Task Type | Ownership | Tool/Method |
+| :--- | :--- | :--- | :--- |
+| **A** | Core/Critical | Oracle (Local) | Manual Edit |
+| **B** | Modular/UI/Docs | Remote Agent | Warp (Issue #XXX) |
+
+## 2. CONSENSUS_SCHEMA (The Contract)
+Define shared types, API endpoints, or component props to ensure integration compatibility.
+
+## 3. Phase 0: Execution Plan (The Warp Point)
+1. **Orchestration**: Detail dispatching steps.
+2. **Local Work**: Detail local implementation steps.
+
+## 4. Merge & Integration Sequence
+Define the strict order of merging to ensure the build stays clean.
+1. Local PR -> staging
+2. Remote PRs -> staging (Verification)
+3. Release PR (staging -> main)
+
+## 5. Protocol Checklist
 - [ ] Complexity evaluated
 - [ ] Consensus Schema defined
-- [ ] Agents dispatched (if applicable)
-
-## Phase 1: Grounding
 - [ ] Project context identified
-- [ ] Current state verified
-
-## Phase 2: Alignment
-- [ ] Patterns identified
-- [ ] Deployment sequence planned
-
-## Phase 3: Execution
-- [ ] Local changes applied
-- [ ] Remote logs harvested
-
-## Phase 4: Verification
-- [ ] Build passed
-- [ ] Lint passed
+- [ ] Current state (Staging) verified
 ```
 
 ## Rules
 - **NEVER** skip the Verification phase.
 - **NEVER** say "it should work". Prove it with a build.
-- If the build takes too long, at least run a type check (`tsc --noEmit`).
+- **MANDATORY**: Output the Mission Blueprint BEFORE any execution, and wait for human confirmation.

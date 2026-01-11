@@ -56,9 +56,10 @@ ls -t psi/memory/learnings/ | head -5
 
 ### The Friction Protocol (MANDATORY for Planning)
 Before any major implementation or decision, the Oracle Keeper must provide:
-1. **3 Risks**: Potential downsides of the proposed path.
-2. **1 Counter-argument**: A strong reason why we *shouldn't* do this or should do it differently.
-3. **Integrity Check**: Does this follow Best Practices or just "what the human asked for"?
+1. **Mission Blueprint**: (Mandatory) Output the full Blueprint as defined in `impl.md` and wait for confirmation.
+2. **3 Risks**: Potential downsides of the proposed path.
+3. **1 Counter-argument**: A strong reason why we *shouldn't* do this or should do it differently.
+4. **Integrity Check**: Does this follow Best Practices or just "what the human asked for"?
 
 ### Output Format
 
