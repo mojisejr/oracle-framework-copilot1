@@ -1,35 +1,27 @@
 # Current Focus 🎯
 
-**State**: finished
-**Task**: Audit & Fix: MMV-Tarots Referral System Integrity
+**State**: in-progress
+**Task**: UI/UX Upgrade: First-time Special Package Conversion (mmv-tarots)
 **Issue**: #none
 **Snapshots**: 
-- [2026-01-12_12-25_referral-system-audit.md](../memory/logs/oracle/2026-01-12_12-25_referral-system-audit.md)
-- [2026-01-12_13-35_pull-request-creation.md](../memory/logs/mmv-tarots/2026-01-12_13-35_pull-request-creation.md)
-- [2026-01-12_14-26_referral-failure-analysis.md](../memory/logs/oracle/2026-01-12_14-26_referral-failure-analysis.md)
-- [2026-01-12_14-49_referral-system-id-vs-code-success.md](../memory/logs/mmv-tarots/2026-01-12_14-49_referral-system-id-vs-code-success.md)
-- [2026-01-12_15-42_referral-ux-upgrade-success.md](../memory/logs/mmv-tarots/2026-01-12_15-42_referral-ux-upgrade-success.md)
-**Retrospective**: [2026-01-12/15.48_referral-integrity-ux-fix.md](../memory/retrospectives/2026-01/12/15.48_referral-integrity-ux-fix.md)
-**Since**: 2026-01-12 12:20 GMT+7
+- [2026-01-12_21-42_package-ui-upgrade-plan.md](../memory/logs/mmv-tarots/2026-01-12_21-42_package-ui-upgrade-plan.md)
+**Since**: 2026-01-12 21:41 GMT+7
 
 ---
 
 ## Progress Summary
-- [x] **Phase 1: Integrity Audit**
-  - [x] Analyze /profile vs ShareActions logic
-  - [x] Verify "Delayed Reward" flow (Referrer: 2, Referee: 1)
-  - [x] Root Cause Analysis: Found ID vs ReferralCode mismatch in manual test
-- [x] **Phase 2: Technical Debt & Safety**
-  - [x] Fix any type casting in ShareActions (via util & interface)
-  - [x] Standardize Referral Link generation (DRY via ReferralUtils)
-- [x] **Phase 3: Transparency Improvements**
-  - [x] Share Page: Show "3 Free Readings" banner immediately (Fix first-touch)
-  - [x] Profile Page: Add "How it works" steps (1-2-3)
-  - [x] Copywriting: Clarify "Delayed Reward" mechanics
-- [x] **Phase 4: Deployment & Documentation**
-  - [x] Merge to staging (Local)
-  - [x] Push to remote staging
-  - [x] Create PR #51: Staging -> Main
+- [ ] **Phase 1: Visual Foundation**
+  - [ ] Add `Check` icon to UI library
+  - [ ] Define First-time Exclusive styles (Glow, Badge)
+- [ ] **Phase 2: Content & Value Proposition**
+  - [ ] Add Feature List (Value Stack) to Package Cards
+  - [ ] Implement Smart Savings Badge calculation
+- [ ] **Phase 3: Interactive Polish**
+  - [ ] Refine CTA button labels per package
+  - [ ] Add Trust & Safety footer
+- [ ] **Phase 4: Verification**
+  - [ ] Verify Responsive UI
+  - [ ] Final Build check
 
 ---
 
