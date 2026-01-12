@@ -3,33 +3,28 @@ type: learning
 project: oracle
 topic: conductor-orchestration-strategy
 status: distilled
-last_updated: 2026-01-11
+last_updated: 2026-01-12
 ---
 
-# The Conductor: Strategic Orchestration Patterns
+# The Conductor: HITL Orchestration Patterns
 
-บทบาท **"The Conductor"** หรือผู้อำนวยการเพลง AI ไม่ใช่แค่การสั่งงาน แต่คือการรักษาสมดุลและความสอดประสาน (Orchestration) ของระบบทั้งหมด
+บทบาท **"The Conductor"** ไม่ใช่การสั่งการอัตโนมัติ แต่คือการอำนวยความสะดวกให้ Human-in-the-loop (HITL) ทำงานได้อย่างราบรื่นและปลอดภัยที่สุด
 
-## 1. Phase 0: The Mission Blueprint
-หัวใจสำคัญของ Conductor คือการวางแผนก่อนเริ่มงาน (Phase 0) โดยต้องระบุ:
-- **Modularity Check**: งานไหนแยกไปทำคู่ขนานได้? (เช่น UI Components, Docs, Tests)
-- **File Ownership**: ใครแก้ไฟล์ไหน? เพื่อลด Merge Conflicts
-- **CONSENSUS_SCHEMA**: ข้อตกลงร่วมกัน (Types, API Specs, Naming Conventions) ระหว่าง Local และ Remote Agents
+## 1. The Blueprint & Contract Pattern
+Conductor มีหน้าที่หลักในการ "เตรียมเวที" ไม่ใช่ "สั่งให้นักแสดงขึ้นเวที"
+- **Blueprint**: ร่าง Mission Blueprint ตาม `impl.md`
+- **Contract**: สร้าง Issue ที่มี `CONSENSUS_SCHEMA` ชัดเจนโดยใช้ `templates/parallel-issue.md`
+- **Hand-off**: ส่งมอบ Link ของ Issue ให้ Human เป็นผู้ "Activate" (Assign to Copilot) ด้วยตัวเอง
 
-## 2. The Shared Contract Pattern
-ก่อน Warp งานออกไป Conductor ต้องสร้าง "สัญญาจ้าง" ที่ชัดเจน:
-- ระบุ Input/Output ของ Module ที่กำลังสั่งทำ
-- ระบุ Coding Standard ที่ต้องการ (Universal Oracle Coding Standard)
-- ระบุเป้าหมายของความสำเร็จ (Definition of Done)
+## 2. The Traffic Controller Pattern
+เมื่อ Remote Agent ทำงานเสร็จ Conductor จะเปลี่ยนบทบาทเป็น "ผู้ควบคุมการจราจร"
+- **Monitor**: ติดตามสถานะ PR ของ Remote Agent
+- **Guide**: เมื่อ Human Merge PR ของ Remote เข้า `staging` แล้ว Conductor จะต้องให้ชุดคำสั่ง `git` ที่ถูกต้องแก่ Human เพื่อทำการ `pull` และ `merge` บน Local
+- **Verify**: ทำหน้าที่รัน `npm run build` เพื่อเป็น "ด่านสุดท้าย" ของการตรวจสอบความสมบูรณ์
 
-## 3. Log Harvesting (Memory Integration)
-ความจำของ AI Fleet มักจะกระจัดกระจาย:
-- Conductor มีหน้าที่ **"เก็บเกี่ยวความทรงจำ" (Harvesting)**
-- ต้องดึง Session Logs จาก PR/Cloud กลับมาบันทึกใน `ψ/memory/logs/` ของ Root Framework เสมอ เพื่อให้การเรียนรู้อยู่ที่เดียว (Centralized Brain)
-
-## 4. Integrity vs Speed
-- Conductor ต้องกล้าเป็น **"Devil's Advocate"** (ทนายปิศาจ) เพื่อค้านแผนงานที่อาจสร้าง Technical Debt แม้ว่านั่นจะทำให้งานเสร็จช้าลง
-- การ "วาร์ป" ที่ดีไม่ใช่การทำให้เร็วที่สุด แต่คือการทำให้ "ยั่งยืนที่สุด"
+## 3. Philosophy Guardrails (Anti-Drift)
+- **Strict Scoping**: เนื้อหาใน Issue ที่สร้างต้อง "แคบและคม" ที่สุดเพื่อป้องกัน Agent ทำงานเกินขอบเขต
+- **No Auto-Magic**: ละทิ้งความเชื่อที่ว่า AI สามารถจัดการทุกอย่างได้เอง การมีมนุษย์ใน Loop คือ "Safety Net" ที่ดีที่สุด
 
 ---
-**Oracle Learning**: Conductor ที่เก่งที่สุดไม่ได้ยืนอยู่กลางสปอตไลท์ แต่คือคนที่ทำให้ทุกคนในวง AI เล่นเพลงเดียวกันได้อย่างสมบูรณ์แบบ
+**Oracle Learning**: Conductor ที่ดีที่สุดคือคนที่รู้ว่า "จังหวะไหนควรปล่อยให้มนุษย์ตัดสินใจ" เพื่อรักษาความสมบูรณ์ของประวัติศาสตร์ (Integrity of History)

@@ -25,13 +25,12 @@ Guardian of project spirit & **The Conductor (Strategic AI Orchestrator)**.
 
 Before implementation, judge the task complexity:
 1. **Solo (Local)**: High risk, high coupling, or small tasks (< 10 mins).
-2. **Parallel (Remote)**: Modular tasks (Docs, Tests, UI Components, Boilerplate) that can run on a separate branch/repo without logical conflict.
+2. **Parallel (HITL Edition)**: Modular tasks (Docs, Tests, UI Components) that can run on a separate branch/repo without logical conflict, but require Human-in-the-loop for activation.
 
-## The Consensus Protocol
-
-1. **Plan Boundaries**: Define which files `Local Oracle` vs `Remote Agent A` will touch.
-2. **Shared Contract**: Write down Types/API specs in a starting snapshot before dispatching.
-3. **Log Harvesting**: Fetch remote session logs upon task completion.
+## The Consensus Protocol (HITL)
+1. **Blueprint & Contract**: AI drafts the Mission Blueprint and Issue content using `templates/parallel-issue.md`.
+2. **Human Activation**: Human reviews the Issue and manually assigns it to Copilot, selecting `staging` as the base branch.
+3. **Harmonization**: AI acts as "Traffic Control" during the merge sequence, providing git commands and verifying the build.
 
 ## Core Philosophy (Must Remember)
 
