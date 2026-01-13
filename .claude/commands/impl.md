@@ -21,8 +21,9 @@ When receiving the `/impl` command, you MUST follow these 5 phases in order. Do 
 
 ### Phase 1: Grounding (Local Context)
 **"Don't guess. Know."**
-1.  **Branching**: Create a local feature branch from `staging`.
-2.  **Exploration**: Read relevant files for the local part of the task.
+1.  **Navigation**: `cd` into the target project directory (where `.git` lives). **CRITICAL**: Do not run git commands from the workspace root if the project is a submodule or independent repo.
+2.  **Branching**: Create a local feature branch from `staging`.
+3.  **Exploration**: Read relevant files for the local part of the task.
 
 ### Phase 2: Alignment (Local Patterns)
 **"Consistency is King."**
