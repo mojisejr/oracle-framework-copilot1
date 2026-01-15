@@ -1,22 +1,21 @@
 # Current Focus 🎯
 
-**State**: completed
-**Task**: Implementation of Welcome Ritual Modal (v1.1 Phase 5)
-**Issue**: #55
+**State**: in-progress
+**Task**: Ninlanee Farm Platform Initialization (Phase 1: User & Public)
+**Issue**: #none
 **Snapshots**: 
-- [2026-01-15_13-10_welcome-ritual-refactor-success.md](../memory/logs/mmv-tarots/2026-01-15_13-10_welcome-ritual-refactor-success.md)
-- [2026-01-15_12-56_welcome-modal-implementation.md](../memory/logs/mmv-tarots/2026-01-15_12-56_welcome-modal-implementation.md)
-- [2026-01-15_12-43_welcome-modal-blueprint.md](../memory/logs/mmv-tarots/2026-01-15_12-43_welcome-modal-blueprint.md)
-**Since**: 2026-01-15 12:45 GMT+7
+- [2026-01-15_19-45_refined-user-centric-blueprint.md](../memory/logs/ninlanee/2026-01-15_19-45_refined-user-centric-blueprint.md)
+- [2026-01-15_14-56_final-blueprint-summary.md](../memory/logs/ninlanee/2026-01-15_14-56_final-blueprint-summary.md)
+**Since**: 2026-01-15 19:40 GMT+7
 
 ---
 
 ## Progress Summary
-- [x] **Block 1**: Backend & Schema (onboardingCompleted)
-- [x] **Block 2**: UI Construction (WelcomeModal) - *Refactored for MimiVibe*
-- [x] **Block 3**: Integration & Wiring
-- [x] **Verification**: Build Pass & PR Created (#55)
-- [x] **Previous Task**: Suggested Question Chips (Completed)
+- [x] **Analysis**: MVP Features & UI Tokens from `template.html`
+- [x] **Tech Stack**: Next.js 15, Better Auth (LINE), Supabase, Prisma
+- [x] **Refined Scope**: Focus on User Profile, Public Showcase, and 2-Step Approval (Approved/Certified)
+- [ ] **Infrastructure**: Initialize Next.js project and setup Prisma Schema
+- [ ] **UI Implementation**: Build Netflix-style Gallery and Chicken Details
 
 ---
 
