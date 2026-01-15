@@ -1,33 +1,26 @@
 # Current Focus 🎯
 
 **State**: in-progress
-**Task**: Refactor & Stabilize Dual Pipeline Architecture
-**Issue**: #1
+**Task**: Implementation of Welcome Ritual Modal (v1.1 Phase 5)
+**Issue**: #none
 **Snapshots**: 
-- [2026-01-13_15-16_codebase-audit-recovery.md](../memory/logs/tiktok-shop-automation/2026-01-13_15-16_codebase-audit-recovery.md)
-- [2026-01-12_22-54_implementation-plan.md](../memory/logs/tiktok-shop-automation/2026-01-12_22-54_implementation-plan.md)
-- [2026-01-12_22-20_deep-dive-automation-flow.md](../memory/logs/tiktok-shop-automation/2026-01-12_22-20_deep-dive-automation-flow.md)
-**Since**: 2026-01-13 15:16 GMT+7
+- [2026-01-15_12-43_welcome-modal-blueprint.md](../memory/logs/mmv-tarots/2026-01-15_12-43_welcome-modal-blueprint.md)
+- [2026-01-15_11-49_suggested-questions-backend-success.md](../memory/logs/mmv-tarots/2026-01-15_11-49_suggested-questions-backend-success.md)
+**Since**: 2026-01-15 12:45 GMT+7
 
 ---
 
 ## Progress Summary
-- [x] **Analysis**: Explore folder structure and architecture
-- [x] **Snapshot**: Create detailed analysis log
-- [x] **Deep Dive**: Visualize Dual-Pipeline (Image -> Video)
-- [x] **Bug Fix**: Image Gen settings (Portrait/Single)
-- [x] **Bug Fix**: Video Gen logic (Polling/Upload)
-- [x] **Stability**: Service Worker Keep-Alive (Heartbeat)
-- [x] **Architecture**: SoC for Video/Image Detection (Initialized but Fragile)
-- [x] **Emergency Fix**: Repair SyntaxError in `flow-content-script.js`
-- [x] **Phase 1**: Foundation - Core Utils + Schema + Folder Reorg
-- [x] **Phase 2**: Image Service Isolation (550 lines extracted)
-- [x] **Phase 3**: Video Service Isolation (450+ lines extracted)
-- [x] **Phase 4**: Integration & State Machine Rewiring (460 lines removed)
+- [x] **Block 1**: Backend & Schema (onboardingCompleted)
+- [x] **Block 2**: UI Construction (WelcomeModal)
+- [x] **Block 3**: Integration & Wiring
+- [x] **Previous Task**: Suggested Question Chips (Completed)
 
 ---
 
 ### History (Pinned)
+- [x] #53 - mmv-tarots: Suggested Question Chips (v1.1 Deployment)
+- [x] #1 - tiktok-automation: Recover & Solidify Shared + Image Pipeline (Phase 6b)
 - [x] #none - UI/UX Upgrade: First-time Special Package Conversion (mmv-tarots)
 - [x] #none - Audit & Fix: MMV-Tarots Referral System Integrity
 - [x] #none - Implementation: Anti-Fraud Referral System (Star-Farming)
