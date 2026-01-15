@@ -8,76 +8,70 @@ The **Oracle Implementation Protocol** is a strict workflow designed to ensure c
 /impl [task description]
 ```
 
-## The 4-Phase Protocol (MANDATORY)
+## The 5-Phase Protocol (HITL Edition)
 
-When receiving the `/impl` command, you MUST follow these 4 phases in order. Do not skip any phase.
+When receiving the `/impl` command, you MUST follow these 5 phases in order. Do not skip any phase.
 
-### Phase 1: Grounding (Context First)
+### Phase 0: Planning & Issue Scaffolding
+**"AI prepares the contract, Human pulls the trigger."**
+1.  **Complexity Check**: Evaluate if the task can be parallelized.
+2.  **Contract Construction**: Use `templates/parallel-issue.md` to draft the content for the GitHub Issue. This includes the `CONSENSUS_SCHEMA`, scope, and constraints.
+3.  **Issue Creation**: Create a new GitHub Issue in the target repository with a title `[Warp] [Task Name]`.
+4.  **Hand-off**: Present the link to the created Issue to the user. **DO NOT** use any tool to auto-assign the issue. Update `focus.md` with the issue link.
+
+### Phase 1: Grounding (Local Context)
 **"Don't guess. Know."**
-1.  **Identify Project Context**: 
-    *   Determine if the task belongs to a **Sub-Project** (`projects/*`) or the **Oracle Framework** (Root).
-    *   Check the relevant Git repository for that specific context.
-2.  **Git Pre-flight Check**: 
-    *   Check current branch using `git branch --show-current` (in the correct context).
-    *   **STRICT RULE**: New feature branches MUST be created from `staging` only.
-    *   **WARNING**: If the current branch is NOT `staging`, you MUST stop and warn the human. DO NOT proceed with any file changes or branch creation until the human gives an explicit command to switch or proceed.
-3.  **Explore**: Use `grep_search` or `list_dir` to understand the current directory structure and relevant files.
-3.  **Read**: Read the actual content of related files to understand the "vibe" and existing logic.
-4.  **State**: Confirm the current state of the codebase before making changes.
+1.  **Navigation**: `cd` into the target project directory (where `.git` lives). **CRITICAL**: Do not run git commands from the workspace root if the project is a submodule or independent repo.
+2.  **Branching**: Create a local feature branch from `staging`.
+3.  **Exploration**: Read relevant files for the local part of the task.
 
-### Phase 2: Alignment (Pattern Matching)
+### Phase 2: Alignment (Local Patterns)
 **"Consistency is King."**
-1.  **Branching (Context-Aware)**: 
-    *   **Sub-Project**: `cd` into the project folder and create a branch in its own repository.
-    *   **Oracle Framework**: Create a branch in the root repository.
-    *   **STRICT RULE**: Only Oracle-specific tasks can manage branches in the root repository.
-    *   Create a new branch from `staging` using the pattern: `<type>/<name>` (e.g., `feat/mimi-soul`, `fix/centering`, `refactor/auth`).
-    *   NEVER create a branch from another feature branch.
-2.  **Identify Patterns**: Look for existing conventions (naming, folder structure, libraries used).
-3.  **Match Style**: Decide how to implement the new feature so it looks like it was written by the original author.
-4.  **Plan**: Propose a short plan to the user.
+1.  **Identify Patterns**: Match the existing style for the local implementation.
+2.  **Local Plan**: Finalize the plan for the code you will write locally.
 
-### Phase 3: Execution (Simple & Robust)
-**"Simple is better than clever."**
-1.  **Atomic Changes**: Make small, focused edits.
-2.  **Robustness**: Handle edge cases and errors gracefully.
-3.  **Type Safety**: No `any`. Use strict typing.
+### Phase 3: Parallel Execution
+**"Work in parallel, integrate in sequence."**
+1.  **Local Execution**: Implement the local tasks.
+2.  **Remote Monitoring**: Wait for the user to confirm that the remote PR (from the issue you created) has been merged into `staging`.
 
-### Phase 4: Verification (Definition of Done)
-**"It doesn't work until it builds."**
-1.  **Build**: You MUST run the build command (e.g., `npm run build`, `next build`) to verify integrity.
-2.  **Lint**: You MUST run the linter (e.g., `npm run lint`) to check for style violations.
-3.  **Fix**: If errors occur, fix them immediately. Do not report success until the build passes.
+### Phase 4: Harmonization & Verification
+**"Staging is the single source of truth."**
+1.  **Force Sync**: After user confirmation, pull the latest `staging` branch into your local feature branch.
+2.  **Conflict Resolution**: Resolve any merge conflicts locally. This is the designated "battleground".
+3.  **Build & Lint (The Hard Gate)**: You MUST run the build and lint commands. The build MUST pass 100% with no errors.
+4.  **Final Commit**: Commit the harmonized code. The task is only "Done" after this build passes.
 
-## Output Template
+## Output Template (Mission Blueprint)
 
-When starting an `/impl` task, output this checklist:
+When starting an `/impl` task, you MUST output a **Mission Blueprint**.
 
 ```markdown
-# 🛡️ Oracle Implementation Protocol
+# 🛡️ Mission Blueprint: [Task Name]
 
-**Task**: [Task Name]
-**Context**: [Oracle Framework | Sub-Project: Name]
+**Task**: Brief description
+**Orchestration Strategy**: [Solo | **Parallel (HITL Edition)**]
+**Target Environment**: [Project Path + Repository Name]
+**Base Branch**: `staging`
 
-## Phase 1: Grounding
-- [ ] Project context identified
-- [ ] Context-specific Git state verified
-- [ ] Current state verified
+## 1. Delegation & Local Work Plan
+| Node | Task Description | Ownership | Hand-off Point |
+| :--- | :--- | :--- | :--- |
+| **A** | Core Logic / Backend | Oracle (Local) | N/A |
+| **B** | UI / Docs / Modular Task | Remote Agent | **GitHub Issue #XXX** (for Human to assign) |
 
-## Phase 2: Alignment
-- [ ] Pattern identified: [e.g., Service Layer, Zod Validation]
-- [ ] Plan proposed
+## 2. CONSENSUS_SCHEMA (The Contract)
+*Shared types and constants to prevent conflicts.*
 
-## Phase 3: Execution
-- [ ] Implementation started
-- [ ] Code written (Simple + Robust)
-
-## Phase 4: Verification
-- [ ] Build passed (`npm run build`)
-- [ ] Lint passed
+## 3. Harmonization Sequence (The Merge Plan)
+1.  **Human**: Merge Remote PR (from Issue #XXX) into `staging`.
+2.  **Human**: Notify AI.
+3.  **AI**: `git pull origin staging` into local branch.
+4.  **AI**: Resolve conflicts & run `npm run build`.
+5.  **AI**: Commit final changes.
 ```
 
 ## Rules
-- **NEVER** skip the Verification phase.
-- **NEVER** say "it should work". Prove it with a build.
-- If the build takes too long, at least run a type check (`tsc --noEmit`).
+- **NEVER** auto-assign issues to Copilot. This is a human's role.
+- **NEVER** skip the Harmonization & Verification phase.
+- **MANDATORY**: The build must pass 100% before declaring the task complete.
