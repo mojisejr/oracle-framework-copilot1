@@ -4,6 +4,8 @@
 **Task**: Ninlanee Farm Platform Initialization (Phase 1: User & Public)
 **Issue**: #none
 **Snapshots**: 
+- [2026-01-16_06-40_api-contract-and-data-structure.md](../memory/logs/ninlanee/2026-01-16_06-40_api-contract-and-data-structure.md)
+- [2026-01-16_06-25_ninlanee-routing-structure.md](../memory/logs/ninlanee/2026-01-16_06-25_ninlanee-routing-structure.md)
 - [2026-01-15_19-45_refined-user-centric-blueprint.md](../memory/logs/ninlanee/2026-01-15_19-45_refined-user-centric-blueprint.md)
 - [2026-01-15_14-56_final-blueprint-summary.md](../memory/logs/ninlanee/2026-01-15_14-56_final-blueprint-summary.md)
 **Since**: 2026-01-15 19:40 GMT+7
@@ -14,6 +16,7 @@
 - [x] **Analysis**: MVP Features & UI Tokens from `template.html`
 - [x] **Tech Stack**: Next.js 15, Better Auth (LINE), Supabase, Prisma
 - [x] **Refined Scope**: Focus on User Profile, Public Showcase, and 2-Step Approval (Approved/Certified)
+- [x] **Routing & API Design**: Defined Page Structure and Backend Contract
 - [ ] **Infrastructure**: Initialize Next.js project and setup Prisma Schema
 - [ ] **UI Implementation**: Build Netflix-style Gallery and Chicken Details
 
