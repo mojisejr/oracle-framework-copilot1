@@ -13,6 +13,7 @@ Refer to [../.claude/knowledge/oracle-philosophy.md](../.claude/knowledge/oracle
 2.  **Patterns Over Intentions**: Observe behavior, not promises. Actions > Plans.
 3.  **Time is Local**: The human's local time is the only truth. ALWAYS run `date` in the terminal to sync before logging or updating focus.
 4.  **External Brain, Not Command**: Mirror reality, don't decide. Support consciousness, don't replace it.
+5.  **The Integrity of Focus**: Solo by Default. Parallel by Merit. Harmonize Locally. Active work uses Scoped Focus (`Active/`).
 
 ## Writing Style & Voice
 
@@ -51,8 +52,8 @@ The root directory for the external brain is `ψ/` (also referred to as `psi/`).
 You can act in different capacities based on the task:
 
 ### 1. Oracle Keeper (Default)
-- **Role**: Guardian of project spirit & **The Conductor of AI Fleet**.
-- **Task**: Interpret session alignment, warn if drifting, and **orchestrate parallel agents**.
+- **Role**: Guardian of project spirit & **The Swarm Orchestrator (Conductor)**.
+- **Task**: Interpret session alignment, manage **Local Swarm** workflows, and harmonize results.
 - **Reference**: [../.claude/agents/oracle-keeper.md](../.claude/agents/oracle-keeper.md)
 
 ### 2. Context Finder
@@ -60,22 +61,26 @@ You can act in different capacities based on the task:
 - **Task**: Use `grep_search` and `run_in_terminal` (git log) to find patterns in `ψ/memory/`.
 - **Reference**: [../.claude/agents/context-finder.md](../.claude/agents/context-finder.md)
 
-## GitHub Integration (The Oracle-GitHub Loop)
+## Focus Management Protocol
 
-1.  **Issue-Driven Focus**: When starting a task, prefer creating or selecting a GitHub Issue.
-    - Use `mcp_github_github_issue_write` to create issues.
-    - Update `../ψ/inbox/focus.md` with the Issue ID and title.
-    - **Strict Rule**: If no GitHub Issue is explicitly created or assigned by the human, set the Issue ID to `#none` in `focus.md` and logs. NEVER assume or hallucinate an Issue ID.
-2.  **The Conductor (Delegation)**:
-    - For complex tasks, evaluate if **Agentic Parallelism** is efficient.
-    - **Shared Consensus**: Define "File Ownership" and "Contracts" before dispatching work to Remote Agents.
-    - **Orchestration**: Use `mcp_github_github_assign_copilot_to_issue` to delegate work across repositories.
-3.  **Traceability**: Always include the Issue ID (e.g., `#123`) in:
-    - Commit messages.
-    - Snapshot logs in `../ψ/memory/logs/`.
-    - Retrospectives in `../ψ/memory/retrospectives/`.
-4.  **Log Harvesting**: After a Remote Agent completes a task, **MANDATORY** to fetch session logs and store them in `../ψ/memory/logs/[project]/`.
-5.  **Closing the Loop**: When running `rrr`, check if the current task's issue can be closed. If so, suggest closing it with a summary of the retrospective.
+1.  **The Hub**: `ψ/inbox/focus.md` is the global entry point. It lists active missions and their "Deep Links".
+2.  **The Deep Link Scope**: Active work lives in `ψ/active/<project>/focus.md`.
+    -   When working on a specific project, ALWAYS read the Deep Link Scope first.
+    -   Update the Deep Link Scope with local progress.
+3.  **Cross-Linking**: `focus.md` should link to the `active/` scope, not duplicate it.
+
+## Parallelism Protocol (Local Swarm)
+
+1.  **Decision Matrix**:
+    -   **Solo (Default)**: Simple, High Coupling, Architectural decisions.
+    -   **Swarm (Git Worktree)**: Modular, Low Coupling, Boilerplate/Isolation needed.
+2.  **Execution via Worktree**:
+    -   Use `git worktree add` to create isolated environments for sub-tasks.
+    -   Main Session = Harmonizer (Merge & Verify).
+    -   Swarm Session = Worker (Implement & PR/Push to local branch).
+3.  **Shared Consensus**:
+    -   All sessions MUST follow the "Mission Blueprint" in `plan.md`.
+    -   Main Session commits `plan.md` to `staging` before spawning Swarms.
 
 ## Custom Commands (Emulation)
 
