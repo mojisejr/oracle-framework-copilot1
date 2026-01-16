@@ -51,3 +51,4 @@ __pycache__/
 .tmp/
 tmp/
 temp/
+projects/mmv-tarots/scripts/hard-reset-and-seed.ts

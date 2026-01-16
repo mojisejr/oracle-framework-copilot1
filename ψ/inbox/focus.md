@@ -4,6 +4,9 @@
 **Task**: Ninlanee Farm Platform Initialization (Phase 1: User & Public)
 **Issue**: #none
 **Snapshots**: 
+- [2026-01-16_22-52_management-ui-complete.md](../memory/logs/ninlanee/2026-01-16_22-52_management-ui-complete.md)
+- [2026-01-16_22-27_remaining-tasks-block-2-3.md](../memory/logs/ninlanee/2026-01-16_22-27_remaining-tasks-block-2-3.md)
+- [2026-01-16_15-24_registry-bloodline-impl.md](../memory/logs/ninlanee/2026-01-16_15-24_registry-bloodline-impl.md)
 - [2026-01-16_13-24_env-example-update-storage.md](../memory/logs/ninlanee/2026-01-16_13-24_env-example-update-storage.md)
 - [2026-01-16_13-16_phase-2-mission-blueprint.md](../memory/logs/ninlanee/2026-01-16_13-16_phase-2-mission-blueprint.md)
 - [2026-01-16_13-13_design-system-and-showcase.md](../memory/logs/ninlanee/2026-01-16_13-13_design-system-and-showcase.md)
@@ -25,6 +28,8 @@
 - [x] **Infrastructure (Block 1.1)**: Next.js 15 + Tailwind 4 + Kanit Font initialized
 - [x] **Infrastructure (Block 1.2)**: Install Prisma & Setup Database (Prisma 6 Stable)
 - [x] **Infrastructure (Block 1.3)**: Setup Better Auth & LINE Login
+- [x] **Feature (Block 2.2)**: Complete Registry Form (Wizard + Bloodline System)
+- [x] **Feature (Block 2.3)**: Complete Management UI (Dashboard, Edit, Storage Cleanup)
 - [ ] **UI Implementation**: Build Netflix-style Gallery and Chicken Details
 
 ---
