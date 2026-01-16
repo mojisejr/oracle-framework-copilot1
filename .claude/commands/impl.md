@@ -28,7 +28,10 @@ When receiving the `/impl` command, you MUST follow these 5 phases in order. Do 
 
 ### Phase 2: Swarm Execution (Parallel)
 **"Work in parallel, see the same truth."**
-1.  **Context Loading**: In each window, the AI reads the shared `plan.md` and the scoped `active/.../focus.md`.
+1.  **Context Verification (CRITICAL)**:
+    -   **PWD Check**: Run `pwd` and verify it matches the Target Environment.
+    -   **Force Navigation**: Always run `cd <absolute_path_to_project>` before ANY other command.
+2.  **Context Loading**: In each window, the AI reads the shared `plan.md` and the scoped `active/.../focus.md`.
 2.  **Execution**: Agents implement their assigned blocks.
 3.  **Local Commit**: Swarm agents commit to their temporary branches.
 

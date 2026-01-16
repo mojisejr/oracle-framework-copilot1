@@ -4,10 +4,15 @@
 **Task**: Ninlanee Farm Platform Initialization (Phase 1: User & Public)
 **Issue**: #none
 **Snapshots**: 
+- [2026-01-16_13-24_env-example-update-storage.md](../memory/logs/ninlanee/2026-01-16_13-24_env-example-update-storage.md)
+- [2026-01-16_13-16_phase-2-mission-blueprint.md](../memory/logs/ninlanee/2026-01-16_13-16_phase-2-mission-blueprint.md)
+- [2026-01-16_13-13_design-system-and-showcase.md](../memory/logs/ninlanee/2026-01-16_13-13_design-system-and-showcase.md)
+- [2026-01-16_10-33_auth-complete-and-design-system-alignment.md](../memory/logs/ninlanee/2026-01-16_10-33_auth-complete-and-design-system-alignment.md)
+- [2026-01-16_10-12_auth-implementation-and-structure-fix.md](../memory/logs/ninlanee/2026-01-16_10-12_auth-implementation-and-structure-fix.md)
+- [2026-01-16_08-30_phase-1-mission-blueprint.md](../memory/logs/ninlanee/2026-01-16_08-30_phase-1-mission-blueprint.md)
+- [2026-01-16_06-45_full-implementation-plan.md](../memory/logs/ninlanee/2026-01-16_06-45_full-implementation-plan.md)
 - [2026-01-16_06-40_api-contract-and-data-structure.md](../memory/logs/ninlanee/2026-01-16_06-40_api-contract-and-data-structure.md)
 - [2026-01-16_06-25_ninlanee-routing-structure.md](../memory/logs/ninlanee/2026-01-16_06-25_ninlanee-routing-structure.md)
-- [2026-01-15_19-45_refined-user-centric-blueprint.md](../memory/logs/ninlanee/2026-01-15_19-45_refined-user-centric-blueprint.md)
-- [2026-01-15_14-56_final-blueprint-summary.md](../memory/logs/ninlanee/2026-01-15_14-56_final-blueprint-summary.md)
 **Since**: 2026-01-15 19:40 GMT+7
 
 ---
@@ -16,8 +21,10 @@
 - [x] **Analysis**: MVP Features & UI Tokens from `template.html`
 - [x] **Tech Stack**: Next.js 15, Better Auth (LINE), Supabase, Prisma
 - [x] **Refined Scope**: Focus on User Profile, Public Showcase, and 2-Step Approval (Approved/Certified)
-- [x] **Routing & API Design**: Defined Page Structure and Backend Contract
-- [ ] **Infrastructure**: Initialize Next.js project and setup Prisma Schema
+- [x] **Architecture Design**: Defined Page Structure, API Contract, and Full Implementation Plan
+- [x] **Infrastructure (Block 1.1)**: Next.js 15 + Tailwind 4 + Kanit Font initialized
+- [x] **Infrastructure (Block 1.2)**: Install Prisma & Setup Database (Prisma 6 Stable)
+- [x] **Infrastructure (Block 1.3)**: Setup Better Auth & LINE Login
 - [ ] **UI Implementation**: Build Netflix-style Gallery and Chicken Details
 
 ---
