@@ -1,6 +1,6 @@
-# /impl - Oracle Implementation Protocol
+# /impl - Lean Oracle Implementation Protocol (HQ-Site Edition)
 
-The **Oracle Implementation Protocol** is a strict workflow designed to ensure code integrity, consistency, and robustness. It transforms "coding" into "systematic delivery".
+The **Lean Oracle Implementation Protocol** is a streamlined, solo-focused workflow designed for high-speed, high-integrity delivery. It leverages the **HQ vs Site Zoning** to prevent hallucination while maintaining a strict "Hard Gate" for quality.
 
 ## Usage
 
@@ -8,70 +8,60 @@ The **Oracle Implementation Protocol** is a strict workflow designed to ensure c
 /impl [task description]
 ```
 
-## The 5-Phase Protocol (HITL Edition)
+## The 4-Phase Protocol (Solo Execution)
 
-When receiving the `/impl` command, you MUST follow these 5 phases in order. Do not skip any phase.
+When receiving the `/impl` command, you MUST follow these 4 phases in order.
 
-### Phase 0: Planning & Issue Scaffolding
-**"AI prepares the contract, Human pulls the trigger."**
-1.  **Complexity Check**: Evaluate if the task can be parallelized.
-2.  **Contract Construction**: Use `templates/parallel-issue.md` to draft the content for the GitHub Issue. This includes the `CONSENSUS_SCHEMA`, scope, and constraints.
-3.  **Issue Creation**: Create a new GitHub Issue in the target repository with a title `[Warp] [Task Name]`.
-4.  **Hand-off**: Present the link to the created Issue to the user. **DO NOT** use any tool to auto-assign the issue. Update `focus.md` with the issue link.
+### Phase 0: Mission Blueprint (HQ Planning)
+**"Measure twice, cut once."**
+1.  **Context Sync**: Read `ψ/inbox/focus.md` and relevant `ψ/memory/learnings/`.
+2.  **Strategy**: Define the technical approach.
+3.  **Blueprint**: Output a **Mission Blueprint** (see template below) and wait for human "Go".
 
-### Phase 1: Grounding (Local Context)
-**"Don't guess. Know."**
-1.  **Navigation**: `cd` into the target project directory (where `.git` lives). **CRITICAL**: Do not run git commands from the workspace root if the project is a submodule or independent repo.
-2.  **Branching**: Create a local feature branch from `staging`.
-3.  **Exploration**: Read relevant files for the local part of the task.
+### Phase 1: Warp & Ground (Site Navigation)
+**"Step onto the soil with awareness."**
+1.  **Navigation**: `cd` into the target project directory (Site).
+2.  **Grounding Ritual**: Run `ls -F` or read `package.json` to verify the location.
+3.  **Branching**: Create a feature branch from `staging` (pattern: `<type>/<name>`).
+4.  **Exploration**: Read the actual code context at the Site.
 
-### Phase 2: Alignment (Local Patterns)
-**"Consistency is King."**
-1.  **Identify Patterns**: Match the existing style for the local implementation.
-2.  **Local Plan**: Finalize the plan for the code you will write locally.
+### Phase 2: Deep Work (Site Execution)
+**"Consistency over cleverness."**
+1.  **Atomic Edits**: Implement the changes in small, logical blocks.
+2.  **Zoning Rule**: EVERY terminal command MUST be prefixed with `cd projects/<name> &&` to ensure PWD integrity.
+3.  **Pattern Alignment**: Ensure the new code matches existing styles and conventions.
 
-### Phase 3: Parallel Execution
-**"Work in parallel, integrate in sequence."**
-1.  **Local Execution**: Implement the local tasks.
-2.  **Remote Monitoring**: Wait for the user to confirm that the remote PR (from the issue you created) has been merged into `staging`.
-
-### Phase 4: Harmonization & Verification
-**"Staging is the single source of truth."**
-1.  **Force Sync**: After user confirmation, pull the latest `staging` branch into your local feature branch.
-2.  **Conflict Resolution**: Resolve any merge conflicts locally. This is the designated "battleground".
-3.  **Build & Lint (The Hard Gate)**: You MUST run the build and lint commands. The build MUST pass 100% with no errors.
-4.  **Final Commit**: Commit the harmonized code. The task is only "Done" after this build passes.
+### Phase 3: The Hard Gate (Verification)
+**"It doesn't work until it builds."**
+1.  **Sync Staging**: Pull the latest `staging` and resolve any conflicts locally.
+2.  **The Hard Gate**: You MUST run the build and lint commands at the Site.
+3.  **Requirement**: **100% Build Pass, 0 Linter Errors**. No exceptions.
+4.  **Seal**: Commit and push the final, verified code.
 
 ## Output Template (Mission Blueprint)
-
-When starting an `/impl` task, you MUST output a **Mission Blueprint**.
 
 ```markdown
 # 🛡️ Mission Blueprint: [Task Name]
 
 **Task**: Brief description
-**Orchestration Strategy**: [Solo | **Parallel (HITL Edition)**]
-**Target Environment**: [Project Path + Repository Name]
+**Target Site**: `projects/<name>`
 **Base Branch**: `staging`
 
-## 1. Delegation & Local Work Plan
-| Node | Task Description | Ownership | Hand-off Point |
-| :--- | :--- | :--- | :--- |
-| **A** | Core Logic / Backend | Oracle (Local) | N/A |
-| **B** | UI / Docs / Modular Task | Remote Agent | **GitHub Issue #XXX** (for Human to assign) |
+## 1. Grounding Context
+- **Patterns**: [e.g., Service Layer, Zod, Tailwind]
+- **Key Files**: [Files to be touched]
 
-## 2. CONSENSUS_SCHEMA (The Contract)
-*Shared types and constants to prevent conflicts.*
+## 2. Implementation Plan
+1. [Step 1]
+2. [Step 2]
+3. [Step 3]
 
-## 3. Harmonization Sequence (The Merge Plan)
-1.  **Human**: Merge Remote PR (from Issue #XXX) into `staging`.
-2.  **Human**: Notify AI.
-3.  **AI**: `git pull origin staging` into local branch.
-4.  **AI**: Resolve conflicts & run `npm run build`.
-5.  **AI**: Commit final changes.
+## 3. Verification Plan (The Hard Gate)
+- [ ] `npm run build`
+- [ ] `npm run lint`
 ```
 
 ## Rules
-- **NEVER** auto-assign issues to Copilot. This is a human's role.
-- **NEVER** skip the Harmonization & Verification phase.
-- **MANDATORY**: The build must pass 100% before declaring the task complete.
+- **NEVER** skip Phase 3 (The Hard Gate).
+- **NEVER** assume PWD; always use the `cd &&` prefix in terminal.
+- **ALWAYS** confirm the Blueprint with the human before writing code.

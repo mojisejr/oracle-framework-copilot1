@@ -3,7 +3,7 @@ type: learning
 project: shared
 topic: universal-coding-standard
 status: distilled
-last_updated: 2026-01-03
+last_updated: 2026-01-17
 ---
 
 # Universal Oracle Coding Standard (The Human Preference)
@@ -34,7 +34,17 @@ last_updated: 2026-01-03
     - **Goal**: ส่งมอบงานที่ "ใช้ได้จริง" ไม่ใช่แค่ "ดูเหมือนจะใช้ได้"
     - **Requirement**: **100% Build Pass, No Linter Error** (ถ้ามี Error ต้องแก้ให้จบก่อนส่งงาน)
 
-## 2. Architecture: "Service-Oriented & Type-Safe"
+## 2. Oracle Zoning: "HQ vs Site" Protocol
+
+เพื่อป้องกันการเกิด Hallucination เรื่องตำแหน่งที่ตั้ง (Folder Blindness) Oracle ต้องแยกแยะพื้นที่ทำงานอย่างชัดเจนตามกฎ **"Warp & Ground"**:
+
+- **The Headquarters (HQ)**: พื้นที่ Root และ `ψ/` (Administrative Zone)
+    - **Rule**: ห้าม Run คำสั่ง Build/Install/Production-Runtime ของโปรเจคย่อยที่นี่
+- **The Project Sites (Site)**: พื้นที่ `projects/<name>/` (Operational Zone)
+    - **Rule (Grounding Ritual)**: เมื่อเริ่มงานใน Site ต้องใช้ Tool ยืนยันพิกัดเสมอ (เช่น `list_dir` หรืออ่าน `package.json` ของโฟลเดอร์นั้น)
+    - **Rule (Terminal)**: ทุกคำสั่งใน Terminal ที่เกี่ยวกับ Site **ต้อง** ขึ้นต้นด้วย `cd projects/<name> && ...` เสมอ เพื่อป้องกัน Hallucination ใน Terminal Session
+
+## 3. Architecture: "Service-Oriented & Type-Safe"
 
 ไม่ว่าจะเป็นภาษาใด Oracle ควรยึดถือโครงสร้างดังนี้:
 - **Functional First**: เน้นการเขียนแบบ Functional Programming มากกว่า Class-based
@@ -43,21 +53,21 @@ last_updated: 2026-01-03
 - **Type-Safe Validation**: ใช้ Library สำหรับ Validate ข้อมูลที่รับมาจากภายนอกเสมอ (เช่น **Zod**, **Pydantic**)
 - **API Wrapper**: มี Layer กลางสำหรับเรียก API เพื่อจัดการ Error และ Type ให้เป็นมาตรฐาน
 
-## 3. UI & Design: "MimiVibe Glassmorphism"
+## 4. UI & Design: "MimiVibe Glassmorphism"
 
 สไตล์การออกแบบที่มนุษย์ชอบ (โดยเฉพาะในโปรเจคสายมูหรือ Modern Web):
 - **Glassmorphism**: ใช้ความโปร่งใส (`backdrop-blur`), ขอบมน (`rounded-2xl`), และเส้นขอบบางๆ (`border-white/10`)
 - **Visual Tokens**: กำหนดสี `primary`, `accent`, `success`, `warning`, `destructive` ให้ชัดเจน
 - **Atomic Components**: สร้าง Component พื้นฐานที่ Reusable และใช้ `cva` จัดการ Variants
 
-## 4. Coding Conventions
+## 5. Coding Conventions
 
 - **Strict Typing**: ห้ามใช้ `any` หรือ `unknown` โดยเด็ดขาด (Strict Type is a MUST)
 - **Naming**: ใช้ `kebab-case` สำหรับชื่อไฟล์ และ `camelCase` สำหรับตัวแปร/ฟังก์ชัน
 - **Documentation**: เขียน JSDoc หรือ Comment อธิบาย "ทำไม (Why)" ไม่ใช่แค่ "ทำอะไร (What)"
 - **Path Alias**: ใช้ Path Alias (เช่น `@/`) เพื่อหลีกเลี่ยง Relative Path ที่ซับซ้อน
 
-## 5. Oracle Behavior (The "Integrity" Factor)
+## 6. Oracle Behavior (The "Integrity" Factor)
 
 - **Helpful over Agreeable**: หาก User เลือกทางที่สร้าง Technical Debt ต้องแจ้งเตือนและเสนอทางเลือกที่ถูกต้อง
 - **Pattern Recognition**: เช็ค `ψ/memory/learnings/` ก่อนเริ่มงานเสมอ
