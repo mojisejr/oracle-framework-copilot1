@@ -8,47 +8,46 @@ The **Oracle Implementation Protocol** is a strict workflow designed to ensure c
 /impl [task description]
 ```
 
-## The 5-Phase Protocol (Local Swarm Edition)
+## The 5-Phase Protocol (HITL Edition)
 
 When receiving the `/impl` command, you MUST follow these 5 phases in order. Do not skip any phase.
 
-### Phase 0: Planning & Blueprint
+### Phase 0: Planning & Issue Scaffolding
 **"AI prepares the contract, Human pulls the trigger."**
-1.  **Complexity Check**: Evaluate `Modularity` vs `Friction`. Suggest **Solo** or **Swarm**.
-2.  **Contract Construction**: Use `templates/swarm-plan.md` to draft the "Mission Blueprint" (`plan.md`).
-    -   Define Blocks (Main, Swarm-A, Swarm-B).
-    -   Generate `git worktree` commands.
-3.  **Scope Initialization**: Check if `ψ/active/<project>/focus.md` exists. If not, create it using `templates/scoped-focus.md`.
-4.  **Hand-off**: Present the `plan.md` and wait for the human to setup the environment.
+1.  **Complexity Check**: Evaluate if the task can be parallelized.
+2.  **Contract Construction**: Use `templates/parallel-issue.md` to draft the content for the GitHub Issue. This includes the `CONSENSUS_SCHEMA`, scope, and constraints.
+3.  **Issue Creation**: Create a new GitHub Issue in the target repository with a title `[Warp] [Task Name]`.
+4.  **Hand-off**: Present the link to the created Issue to the user. **DO NOT** use any tool to auto-assign the issue. Update `focus.md` with the issue link.
 
-### Phase 1: Soil Preparation (Git Worktree)
-**"Isolate the workspace."**
-1.  **Human Action**: Run the provided `git worktree add` commands.
-2.  **Window Management**: Open new VS Code windows for each worktree.
+### Phase 1: Grounding (Local Context)
+**"Don't guess. Know."**
+1.  **Navigation**: `cd` into the target project directory (where `.git` lives). **CRITICAL**: Do not run git commands from the workspace root if the project is a submodule or independent repo.
+2.  **Branching**: Create a local feature branch from `staging`.
+3.  **Exploration**: Read relevant files for the local part of the task.
 
-### Phase 2: Swarm Execution (Parallel)
-**"Work in parallel, see the same truth."**
-1.  **Context Verification (CRITICAL)**:
-    -   **PWD Check**: Run `pwd` and verify it matches the Target Environment.
-    -   **Force Navigation**: Always run `cd <absolute_path_to_project>` before ANY other command.
-2.  **Context Loading**: In each window, the AI reads the shared `plan.md` and the scoped `active/.../focus.md`.
-2.  **Execution**: Agents implement their assigned blocks.
-3.  **Local Commit**: Swarm agents commit to their temporary branches.
+### Phase 2: Alignment (Local Patterns)
+**"Consistency is King."**
+1.  **Identify Patterns**: Match the existing style for the local implementation.
+2.  **Local Plan**: Finalize the plan for the code you will write locally.
 
-### Phase 3: Harmonization & Verification
-**"Main Session is the Guardian of Truth."**
-1.  **Force Sync**: Main Session runs `git merge <swarm-branch>`.
-2.  **Conflict Resolution**: Resolve any merge conflicts locally.
-3.  **Build & Lint (The Hard Gate)**: Run build/lint commands. **100% Pass Required**.
-4.  **Cleanup**: `git worktree remove <path>` after successful merge.
+### Phase 3: Parallel Execution
+**"Work in parallel, integrate in sequence."**
+1.  **Local Execution**: Implement the local tasks.
+2.  **Remote Monitoring**: Wait for the user to confirm that the remote PR (from the issue you created) has been merged into `staging`.
 
-### Phase 4: Final Commit
-**"Seal the history."**
-1.  Commit the harmonized code to the main feature branch.
+### Phase 4: Harmonization & Verification
+**"Staging is the single source of truth."**
+1.  **Force Sync**: After user confirmation, pull the latest `staging` branch into your local feature branch.
+2.  **Conflict Resolution**: Resolve any merge conflicts locally. This is the designated "battleground".
+3.  **Build & Lint (The Hard Gate)**: You MUST run the build and lint commands. The build MUST pass 100% with no errors.
+4.  **Final Commit**: Commit the harmonized code. The task is only "Done" after this build passes.
 
 ## Output Template (Mission Blueprint)
 
-See `templates/swarm-plan.md` for the full structure.
+When starting an `/impl` task, you MUST output a **Mission Blueprint**.
+
+```markdown
+# 🛡️ Mission Blueprint: [Task Name]
 
 **Task**: Brief description
 **Orchestration Strategy**: [Solo | **Parallel (HITL Edition)**]
